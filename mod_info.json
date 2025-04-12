@@ -4,7 +4,7 @@
 	"version":{"major":0, "minor":0, "patch":1},
 	"gameVersion":"0.97a-RC10",
 	"author":"善良地砖",
-	"description":"没有描述",
+	"description":"远神星规mod",
 	"dependencies": [
 		{
 			"id": "lw_lazylib",
