@@ -1,0 +1,6 @@
+name,id,tier,rarity,tech/manufacturer,tags,uiTags,base value,unlocked,hidden,hiddenEverywhere,cost_frigate,cost_dest,cost_cruiser,cost_capital,script,desc,short,sprite,
+星规-流转核心,SRA_core,,,,,,,,TRUE,,0,0,0,0,data.hullmods.SRA_core,"-创造与超越-
+加快强制散幅速度。
+加快护盾展开速度。
+加快舰船组件自我修复的速度。
+完全 免疫EMP伤害。",-创造与超越-,,graphics/hullmods/SRA_core.png

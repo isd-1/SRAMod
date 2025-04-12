@@ -1,0 +1,193 @@
+{
+  "hullName": "SRA_SOGZ_main",
+  "hullId": "SRA_SOGZ_main",
+  "hullSize": "CAPITAL_SHIP",
+  "spriteName": "graphics/ships/SRA_SOGZ_main.png",
+  "style": "OMEGA",
+  "height": 884,
+  "width": 380,
+  "center": [190.5, 441.5],
+  "collisionRadius": 460,
+  "shieldCenter": [0.5, 0.5],
+  "shieldRadius": 454.5,
+  "viewOffset": 0,
+  "builtInMods": [
+    "SRA_core",
+    "advancedcore",
+    "operations_center"
+  ],
+  "builtInWeapons": {
+    "WS0009": "SRA_riftcascade_ex",
+    "WS0010": "SRA_riftcascade"
+  },
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "LARGE",
+      "type": "HYBRID",
+      "mount": "HIDDEN",
+      "arc": 270,
+      "angle": 30,
+      "locations": [-163.5, 37]
+    },
+    {
+      "id": "WS0002",
+      "size": "LARGE",
+      "type": "HYBRID",
+      "mount": "HIDDEN",
+      "arc": 270,
+      "angle": -30,
+      "locations": [-163.5, -37]
+    },
+    {
+      "id": "WS0003",
+      "size": "LARGE",
+      "type": "SYNERGY",
+      "mount": "HIDDEN",
+      "arc": 270,
+      "angle": 60,
+      "locations": [-195.5, 47]
+    },
+    {
+      "id": "WS0004",
+      "size": "LARGE",
+      "type": "SYNERGY",
+      "mount": "HIDDEN",
+      "arc": 270,
+      "angle": -60,
+      "locations": [-195.5, -47]
+    },
+    {
+      "id": "WS0005",
+      "size": "LARGE",
+      "type": "ENERGY",
+      "mount": "HIDDEN",
+      "arc": 360,
+      "angle": 0,
+      "locations": [-80, 45]
+    },
+    {
+      "id": "WS0006",
+      "size": "LARGE",
+      "type": "ENERGY",
+      "mount": "HIDDEN",
+      "arc": 360,
+      "angle": -0,
+      "locations": [-80, -45]
+    },
+    {
+      "id": "WS0007",
+      "size": "LARGE",
+      "type": "HYBRID",
+      "mount": "HIDDEN",
+      "arc": 270,
+      "angle": 0,
+      "locations": [89.5, 14.5]
+    },
+    {
+      "id": "WS0008",
+      "size": "LARGE",
+      "type": "HYBRID",
+      "mount": "HIDDEN",
+      "arc": 270,
+      "angle": -0,
+      "locations": [89.5, -14.5]
+    },
+    {
+      "id": "WS0009",
+      "size": "LARGE",
+      "type": "BUILT_IN",
+      "mount": "HIDDEN",
+      "arc": 30,
+      "angle": 0,
+      "locations": [-38, -0]
+    },
+    {
+      "id": "WS0010",
+      "size": "LARGE",
+      "type": "BUILT_IN",
+      "mount": "HIDDEN",
+      "arc": 360,
+      "angle": 0,
+      "locations": [-237, 1]
+    },
+    {
+      "id": "LB 1",
+      "size": "LARGE",
+      "type": "LAUNCH_BAY",
+      "mount": "HIDDEN",
+      "arc": 360,
+      "angle": 0,
+      "locations": [
+        -168, 3,
+        -157.5, 14.5,
+        -157.5, -5.5
+      ]
+    },
+    {
+      "id": "WS0011",
+      "size": "LARGE",
+      "type": "STATION_MODULE",
+      "mount": "HIDDEN",
+      "arc": 0,
+      "angle": 0,
+      "locations": [255, -0]
+    },
+    {
+      "id": "WS0012",
+      "size": "LARGE",
+      "type": "STATION_MODULE",
+      "mount": "HIDDEN",
+      "arc": 0,
+      "angle": -0,
+      "locations": [-200, -119]
+    },
+    {
+      "id": "WS0013",
+      "size": "LARGE",
+      "type": "STATION_MODULE",
+      "mount": "HIDDEN",
+      "arc": 0,
+      "angle": 0,
+      "locations": [-200, 119]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-255, 35.5],
+      "length": 30,
+      "width": 10,
+      "angle": 180,
+      "contrailSize": 30,
+      "style": "OMEGA"
+    },
+    {
+      "location": [-255, -35.5],
+      "length": 30,
+      "width": 10,
+      "angle": -180,
+      "contrailSize": 30,
+      "style": "OMEGA"
+    }
+  ],
+  "bounds": [
+    92.5, 17.5,
+    14, 59,
+    -18, 52.5,
+    -93.5, 35.5,
+    -158, 38,
+    -207, 53,
+    -205.5, 34,
+    -235, 40,
+    -266, 42.5,
+    -266, -42.5,
+    -235, -40,
+    -205.5, -34,
+    -207, -53,
+    -158, -38,
+    -93.5, -35.5,
+    -18, -52.5,
+    14, -59,
+    92.5, -17.5
+  ]
+}

@@ -1,0 +1,40 @@
+{
+    "displayName": "基底",
+    "fluxCapacitors": 0,
+    "fluxVents": 31,
+    "hullId": "SRA_SOGZ_r",
+    "hullMods": [
+        "hardenedshieldemitter",
+        "reinforcedhull",
+        "magazines",
+        "solar_shielding",
+        "heavyarmor",
+        "turretgyros"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "SRA_SOGZ_r_combat",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS0002": "SRA_riftcascade"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS0001": "pilum_large"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS0004": "tachyonlance"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS0003": "devastator"}
+        }
+    ],
+    "wings": ["perdition_wing"]
+}

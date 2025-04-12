@@ -1,0 +1,95 @@
+{
+  "hullName": "SRA_SOGZ_F",
+  "hullId": "SRA_SOGZ_f",
+  "hullSize": "CAPITAL_SHIP",
+  "spriteName": "graphics/ships/SRA_SOGZ_f.png",
+  "style": "OMEGA",
+  "height": 371,
+  "width": 132,
+  "center": [66, 185.5],
+  "collisionRadius": 187,
+  "shieldCenter": [0, 0],
+  "shieldRadius": 185,
+  "viewOffset": 0,
+  "builtInMods": [
+    "SRA_core",
+    "advancedcore"
+  ],
+  "builtInWeapons": {
+    "WS0001": "SRA_riftcascade",
+    "WS0002": "SRA_riftcascade"
+  },
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "LARGE",
+      "type": "BUILT_IN",
+      "mount": "HIDDEN",
+      "arc": 270,
+      "angle": 30,
+      "locations": [-72, 62]
+    },
+    {
+      "id": "WS0002",
+      "size": "LARGE",
+      "type": "BUILT_IN",
+      "mount": "HIDDEN",
+      "arc": 270,
+      "angle": -30,
+      "locations": [-72, -62]
+    },
+    {
+      "id": "WS0003",
+      "size": "LARGE",
+      "type": "ENERGY",
+      "mount": "HIDDEN",
+      "arc": 270,
+      "angle": 0,
+      "locations": [35.5, 11.5]
+    },
+    {
+      "id": "WS0004",
+      "size": "LARGE",
+      "type": "ENERGY",
+      "mount": "HIDDEN",
+      "arc": 270,
+      "angle": -0,
+      "locations": [35.5, -11.5]
+    },
+    {
+      "id": "WS0005",
+      "size": "LARGE",
+      "type": "HYBRID",
+      "mount": "HIDDEN",
+      "arc": 270,
+      "angle": 0,
+      "locations": [-132, 0]
+    },
+    {
+      "id": "WS0006",
+      "size": "LARGE",
+      "type": "SYNERGY",
+      "mount": "HIDDEN",
+      "arc": 270,
+      "angle": 0,
+      "locations": [-79, -0]
+    }
+  ],
+  "engineSlots": [],
+  "bounds": [
+    133.5, -6,
+    72, -16,
+    -26, -10,
+    -54, -44.5,
+    4.5, -53,
+    -86, -62.5,
+    -173, -48,
+    -173, 48,
+    -86, 62.5,
+    4.5, 53,
+    -54, 44.5,
+    -26, 10,
+    72, 16,
+    133.5, 6
+  ]
+}

@@ -1,0 +1,6 @@
+id,type,text1,text2,text3,text4,notes
+SRA_riftcascade,WEAPON,"一种充能式的裂隙洪流发射极的变体版本。",,,,
+SRA_riftcascade_ex,WEAPON,"一种充能式的裂隙洪流发射极的变体版本，并具有极为恐怖的输出功率。",,,,
+SRA_devastator,WEAPON,"一种先进型多用途速射火炮，用于轰炸指向上的所有目标。",,,,
+SRA_gauss,WEAPON,"一种重型远程火炮，用于进行火力支援。",,,,
+SRA_temporalshell,SHIP_SYSTEM,"加速舰船上的时间流动。诡谲之物。",特殊,加速舰船上的时间流动。,,

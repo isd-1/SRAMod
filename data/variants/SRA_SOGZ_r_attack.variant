@@ -1,0 +1,41 @@
+{
+    "displayName": "强袭",
+    "fluxCapacitors": 0,
+    "fluxVents": 43,
+    "hullId": "SRA_SOGZ_r",
+    "hullMods": [
+        "hardenedshieldemitter",
+        "magazines",
+        "pointdefenseai",
+        "stabilizedshieldemitter",
+        "armoredweapons",
+        "turretgyros",
+        "autorepair"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "SRA_SOGZ_r_attack",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS0002": "SRA_riftcascade"}
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {"WS0003": "SRA_gauss"}
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {"WS0001": "SRA_devastator"}
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {"WS0004": "SRA_devastator"}
+        }
+    ],
+    "wings": ["flash_wing"]
+}
