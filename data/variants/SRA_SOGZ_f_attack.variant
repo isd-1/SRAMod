@@ -1,5 +1,6 @@
 {
     "displayName": "强袭",
+    "goalVariant": true,
     "fluxCapacitors": 48,
     "fluxVents": 50,
     "hullId": "SRA_SOGZ_f",
@@ -25,24 +26,24 @@
             }
         },
         {
-            "autofire": false,
+            "autofire": true,
             "mode": "LINKED",
             "weapons": {"WS0005": "SRA_gauss"}
         },
         {
-            "autofire": false,
+            "autofire": true,
             "mode": "LINKED",
             "weapons": {"WS0004": "SRA_devastator"}
         },
         {
-            "autofire": false,
+            "autofire": true,
             "mode": "LINKED",
             "weapons": {"WS0003": "SRA_devastator"}
         },
         {
-            "autofire": false,
+            "autofire": true,
             "mode": "LINKED",
-            "weapons": {"WS0006": "SRA_devastator"}
+            "weapons": {"WS0006": "SRA_rifttorpedo"}
         }
     ],
     "wings": ["flash_wing"]

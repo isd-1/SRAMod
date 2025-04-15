@@ -1,5 +1,6 @@
 {
     "displayName": "强袭",
+    "goalVariant": true,
     "fluxCapacitors": 33,
     "fluxVents": 50,
     "hullId": "SRA_SOGZ_main",
@@ -24,7 +25,7 @@
     "variantId": "SRA_SOGZ_main_attack",
     "weaponGroups": [
         {
-            "autofire": false,
+            "autofire": true,
             "mode": "LINKED",
             "weapons": {"WS0009": "SRA_riftcascade_ex"}
         },
@@ -34,31 +35,33 @@
             "weapons": {"WS0010": "SRA_riftcascade"}
         },
         {
-            "autofire": false,
-            "mode": "LINKED",
-            "weapons": {"WS0001": "SRA_gauss"}
-        },
-        {
-            "autofire": false,
-            "mode": "LINKED",
-            "weapons": {"WS0002": "SRA_gauss"}
-        },
-        {
-            "autofire": false,
-            "mode": "LINKED",
-            "weapons": {"WS0008": "SRA_gauss"}
-        },
-        {
-            "autofire": false,
-            "mode": "LINKED",
-            "weapons": {"WS0007": "SRA_gauss"}
-        },
-        {
-            "autofire": false,
+            "autofire": true,
             "mode": "LINKED",
             "weapons": {
-                "WS0003": "SRA_devastator",
-                "WS0004": "SRA_devastator",
+                "WS0001": "SRA_gauss",
+                "WS0002": "SRA_gauss"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0007": "SRA_gauss",
+                "WS0008": "SRA_gauss"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0003": "SRA_rifttorpedo",
+                "WS0004": "SRA_rifttorpedo"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
                 "WS0005": "SRA_devastator",
                 "WS0006": "SRA_devastator"
             }

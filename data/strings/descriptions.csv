@@ -4,3 +4,6 @@ SRA_riftcascade_ex,WEAPON,"一种充能式的裂隙洪流发射极的变体版�
 SRA_devastator,WEAPON,"一种先进型多用途速射火炮，用于轰炸指向上的所有目标。",,,,
 SRA_gauss,WEAPON,"一种重型远程火炮，用于进行火力支援。",,,,
 SRA_temporalshell,SHIP_SYSTEM,"加速舰船上的时间流动。诡谲之物。",特殊,加速舰船上的时间流动。,,
+SRA_amsrm,WEAPON,"一种超高速能量导弹",- 得见光芒。,,,
+SRA_resonatormrm,WEAPON,"一种齐射型护盾压制导弹",- 古老的荣光将会再续。,,,
+SRA_rifttorpedo,WEAPON,"创造毁灭的工具。",- 你是历史的奴隶。,,,

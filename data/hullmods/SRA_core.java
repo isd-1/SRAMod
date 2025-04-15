@@ -6,6 +6,8 @@ import com.fs.starfarer.api.combat.ShieldAPI;
 import com.fs.starfarer.api.combat.ShipAPI;
 import com.fs.starfarer.api.combat.ShieldAPI.ShieldType;
 import com.fs.starfarer.api.combat.ShipAPI.HullSize;
+import com.fs.starfarer.api.impl.campaign.ids.Stats;
+import com.fs.starfarer.api.impl.hullmods.BaseLogisticsHullMod;
 
 public class SRA_core extends BaseHullMod {
 	public void applyEffectsBeforeShipCreation(HullSize hullSize, MutableShipStatsAPI stats, String id) {
@@ -21,7 +23,8 @@ public class SRA_core extends BaseHullMod {
 		
 		stats.getSensorStrength().modifyPercent(id, 3000f);			//提高雷达范围
 		
+		stats.getDynamic().getStat(Stats.CORONA_EFFECT_MULT).modifyMult(id, 0f);			//免疫日冕
+		
 		
 	}
 }
-
