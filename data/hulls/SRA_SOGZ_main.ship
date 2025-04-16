@@ -13,7 +13,6 @@
   "viewOffset": 0,
   "builtInMods": [
     "SRA_core",
-    "fluxshunt",
     "advancedcore",
     "operations_center"
   ],

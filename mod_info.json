@@ -22,6 +22,6 @@
 			#"version": "xxx"
 		}
 	],
-	#"jars":["jars/yourJar.jar"],
+	"jars":["jars/SRAMod.jar"],
 	#"modPlugin":"data.scripts.YourModPlugin"
 }

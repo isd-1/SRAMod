@@ -2,7 +2,7 @@ name,id,tier,rarity,base value,range,damage/second,damage/shot,emp,impact,turn r
 星规-破晓之星,SRA_riftcascade_ex,4,,200000,3200,5120,,2560,0,7,50,8,0.25,,ENERGY,,2560,0,0,1,0,,,,,100000,,,,,,,STRIKE,"energy22, beam17, LR, omega, restricted",,星规技术,,通用,,,,,在命中时产生时空裂隙。开火距离越近，产生裂隙越多。每个裂隙对附近目标造 %s 至 %s 的能量伤害。,750 | 1250,,,,29.1
 星规-归虚之光,SRA_riftcascade,4,,200000,1600,1280,,640,0,7,50,4,0.125,,ENERGY,,640,0.25,0.25,0.5,1,,,,,100000,,,,,,,,"energy22, beam17, LR, omega, restricted",,星规技术,,通用,,,,,在命中时产生时空裂隙。开火距离越近，产生裂隙越多。每个裂隙对附近目标造 %s 至 %s 的能量伤害。,750 | 1250,,,,29.1
 星规-归虚之光布雷器,SRA_riftcascade_minelayer,0,,,,,1600,,25,,,,,,ENERGY,0,,,,1,,,,,,,0,0,20,1000,,,SYSTEM,,,星规技术,,,,,,,,,,,,38.5
-星规-虚空撕裂,SRA_plasma,3,,640000,960,,2560,,,25,32,,,,FRAGMENTATION,640,,0.04,1.9,4,0.02,,,,,,1280,,,1000,,,"STRIKE, USE_VS_FRIGATES","energy20, rare_bp, hist1t, merc, ind, omega, restricted",,星规技术,,全面摧毁,,,,,当处于自动开火模式时，将不会瞄准战机。,,,,,23
+星规-虚空撕裂,SRA_plasma,3,,640000,960,,2560,,,25,40,,,,FRAGMENTATION,640,,0.04,1.9,4,0.02,,,,,,1280,,,1000,,,"STRIKE, USE_VS_FRIGATES","energy20, rare_bp, hist1t, merc, ind, omega, restricted",,星规技术,,全面摧毁,,,,,当处于自动开火模式时，将不会瞄准战机。,,,,,23
 星规-风暴迫临,SRA_devastator,3,,640000,960,,160,,40,40,24,,,,FRAGMENTATION,20,,0,0.32,10,0.02,5,30,5,5,,1600,,,100,,,"PD,PD_ALSO","he16, pd17, omega, restricted",,星规技术,,泛用反战机 (范围性),,,,,"如果射程内没有敌舰，则优先瞄准来袭的导弹。",,,,,28
 星规-星弧破碎,SRA_gauss,3,,640000,1280,,960,,150,25,28,,,,ENERGY,640,,0,5.8,2,0.2,0,3,3,1,,1600,,,30,,,"NO_TURN_RATE_BOOST_WHEN_IDLE,STRIKE","kinetic18, omega, restricted",,星规技术,,远距炮击,,,,,%s:可以跨越友军射击,尖端弹道系统,,,,28
 星规-寰宇追迹之火,SRA_amsrm,3,,160000,1280,,640,,15,50,7,4,0.125,,ENERGY,160,,0,0.5,1,,0,0,0,0,,1280,640,16,160,,,"DO_NOT_AIM, DO_NOT_CONSERVE","utility8, missile9, strike7, omega, restricted",,星规技术,,通用高速导弹,极快,优秀,,,,,,,,10
