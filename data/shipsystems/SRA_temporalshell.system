@@ -1,9 +1,9 @@
 {
-	"id":"SRA_temporalshell",
+	"id":"SRA_Temporalshell",
 	"type":"STAT_MOD",
 	"aiType":"TEMPORAL_SHELL",
 	
-	"statsScript":"com.fs.starfarer.api.impl.combat.TemporalShellStats",
+	"statsScript":"data.shipsystems.SRATemporalshellStats",
 	
 	# handled in the script instead of here
 	#"jitterUnderColor":[90,165,255,155],

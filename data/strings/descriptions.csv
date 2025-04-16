@@ -1,5 +1,5 @@
 id,type,text1,text2,text3,text4,notes
-SRA_temporalshell,SHIP_SYSTEM,"加速舰船上的时间流动。诡谲之物。",特殊,加速舰船上的时间流动。,,
+SRA_Temporalshell,SHIP_SYSTEM,"在短暂时间内获得航速、机动性增益，减少所受伤害，加速时间流动，同时释放数个子机。",特殊,在短暂时间内获得最高航速、机动性、伤害减免增益，加速时间流动，同时释放数个子机。,,
 SRA_riftcascade,WEAPON,"一种充能式的裂隙洪流发射极的变体版本。",,,,
 SRA_riftcascade_ex,WEAPON,"一种充能式的裂隙洪流发射极的变体版本，并具有极为恐怖的输出功率。",,,,
 SRA_plasma,WEAPON,"这一型重型粒子团火炮势大力沉，其射弹能造成拥有卓越穿透力的物质抹除效果并引发威力庞大的二次毁伤，甚至会短暂影响空间结构本身的稳定性。",,,,
