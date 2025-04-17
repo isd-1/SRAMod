@@ -1,3 +1,5 @@
 {
-	
+	"SRA_star_eater_weapon_hit_01":[
+		{"file":"sounds/SRA_weapon/SRA_star_eater_weapon_hit_01.ogg", "pitch":1, "volume":1}
+	]
 }

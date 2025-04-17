@@ -1,7 +1,7 @@
 {
 	"specClass":"beam",
 	"id":"SRA_riftcascade",
-	"beamEffect":"com.fs.starfarer.api.impl.combat.RiftCascadeEffect",
+	"beamEffect":"data.weapons.SRA_riftcascadeEffect",
 	"type":"ENERGY",
 	"size":"LARGE",
 	#"collisionClass":"NONE",

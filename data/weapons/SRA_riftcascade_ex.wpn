@@ -4,7 +4,7 @@
 	"type":"ENERGY",
 	"size":"LARGE",
 	#"beamFireOnlyOnFullCharge":true,
-	"beamEffect":"com.fs.starfarer.api.impl.combat.RiftCascadeEffect",
+	"beamEffect":"data.weapons.SRA_riftcascade_exEffect",
 	"turretSprite":"graphics/weapons/tachyon_lance_turret_base.png",
 	"turretGlowSprite":"graphics/weapons/tachyon_lance_turret_glow.png",
 	"hardpointSprite":"graphics/weapons/tachyon_lance_hardpoint_base.png",

@@ -1,6 +1,6 @@
 {
 	# minelayer for the Rift Cascade Emitter, none of the stuff here matters except the specClass and the projectileSpecId
-	"id":"SRA_riftcascade_minelayer",
+	"id":"SRA_riftcascade_ex_minelayer",
 	"specClass":"projectile",
 	"type":"ENERGY",
 	"size":"MEDIUM",
@@ -13,5 +13,5 @@
 	"barrelMode":"ALTERNATING",
 	"animationType":"SMOKE",
 	"interruptibleBurst":false,
-	"projectileSpecId":"SRA_riftcascade_minelayer_mine",
+	"projectileSpecId":"SRA_riftcascade_ex_minelayer_mine",
 }

@@ -17,7 +17,7 @@
     "operations_center"
   ],
   "builtInWeapons": {
-    "WS0009": "SRA_riftcascade_ex",
+    "WS0009": "SRA_T_weapon_supreme",
     "WS0010": "SRA_riftcascade"
   },
   "weaponSlots": [
