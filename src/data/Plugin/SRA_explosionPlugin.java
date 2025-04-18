@@ -2,6 +2,7 @@ package data.Plugin;
 
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.combat.*;
+import com.fs.starfarer.api.combat.WeaponAPI.WeaponType;
 import com.fs.starfarer.api.impl.combat.CombatEntityPluginWithParticles;
 import com.fs.starfarer.api.impl.combat.NegativeExplosionVisual.NEParams;
 import com.fs.starfarer.api.impl.combat.RiftCascadeMineExplosion;
@@ -28,7 +29,7 @@ public class SRA_explosionPlugin extends CombatEntityPluginWithParticles {
     public SRA_explosionPlugin(WeaponAPI weapon) {
         super();
         this.weapon = weapon;
-        ExpInterval = new IntervalUtil(0.08f, 0.08f);
+        ExpInterval = new IntervalUtil(0.02f, 0.02f);
         delay = 0f;
     }
 
@@ -56,7 +57,7 @@ public class SRA_explosionPlugin extends CombatEntityPluginWithParticles {
                 if (ExpInterval.intervalElapsed()) {
                     Vector2f point= proj.getLocation();
                     Vector2f proj_point=proj.getLocation();
-                    List<ShipAPI> ExplosionTarget = CombatUtils.getShipsWithinRange(point, 40f);
+                    List<ShipAPI> ExplosionTarget = CombatUtils.getShipsWithinRange(point, 20f);
                     Iterator<ShipAPI> iter = ExplosionTarget.iterator();
                     while (iter.hasNext() && !Weakenproj) {
                         ShipAPI possibleTarget = iter.next();
@@ -73,16 +74,10 @@ public class SRA_explosionPlugin extends CombatEntityPluginWithParticles {
                     if(ExplosionTarget.isEmpty()){
                         Global.getCombatEngine().spawnDamagingExplosion(SRA_T_weapon_supremeshot_explosion(proj), proj.getSource(),point);
                     } else if (!Weakenproj){
-                        NEParams p = RiftCascadeMineExplosion.createStandardRiftParams("SRA_riftcascade_minelayer", 10f);
-                        //p.hitGlowSizeMult = 0.5f;
-                        p.thickness = 160f;
-                        RiftCascadeMineExplosion.spawnStandardRift(proj, p);
+                        spawnMine(proj.getSource(), point);
                         Global.getCombatEngine().spawnDamagingExplosion(SRA_T_weapon_supremeshot_explosion2(proj), proj.getSource(),point);
                     }else {
-                        NEParams p = RiftCascadeMineExplosion.createStandardRiftParams("SRA_riftcascade_minelayer", 10f);
-                        //p.hitGlowSizeMult = 0.5f;
-                        p.thickness = 160f;
-                        RiftCascadeMineExplosion.spawnStandardRift(proj, p);
+                        spawnMine(proj.getSource(), point);
                         Global.getCombatEngine().spawnDamagingExplosion(SRA_T_weapon_supremeshot_explosion3(proj), proj.getSource(),point);
                     }
                     MagicFakeBeam.spawnFakeBeam(
@@ -113,11 +108,11 @@ public class SRA_explosionPlugin extends CombatEntityPluginWithParticles {
     }
     //无光效爆炸
     public DamagingExplosionSpec SRA_T_weapon_supremeshot_explosion(DamagingProjectileAPI proj) {
-        float damage = 16000;
+        float damage = 6400;
         DamagingExplosionSpec Explosion=new DamagingExplosionSpec(
                 0.05f, // duration
-                320f, // radius
-                160f, // coreRadius
+                160f, // radius
+                80f, // coreRadius
                 damage, // maxDamage
                 damage * 0.75f, // minDamage
                 CollisionClass.PROJECTILE_NO_FF, // collisionClass
@@ -137,11 +132,11 @@ public class SRA_explosionPlugin extends CombatEntityPluginWithParticles {
 
     //正常爆炸
     public DamagingExplosionSpec SRA_T_weapon_supremeshot_explosion2(DamagingProjectileAPI proj) {
-        float damage = 16000;
+        float damage = 6400;
         DamagingExplosionSpec Explosion=new DamagingExplosionSpec(
                 0.1f, // duration
-                320f, // radius
-                160f, // coreRadius
+                160f, // radius
+                80f, // coreRadius
                 damage, // maxDamage
                 damage * 0.75f, // minDamage
                 CollisionClass.PROJECTILE_NO_FF, // collisionClass
@@ -161,11 +156,11 @@ public class SRA_explosionPlugin extends CombatEntityPluginWithParticles {
 
     //击中护盾时的爆炸
     public DamagingExplosionSpec SRA_T_weapon_supremeshot_explosion3(DamagingProjectileAPI proj) {
-        float damage = 16000;
+        float damage = 6400;
         DamagingExplosionSpec Explosion=new DamagingExplosionSpec(
                 0.05f, // duration
-                320f, // radius
-                160f, // coreRadius
+                160f, // radius
+                80f, // coreRadius
                 damage, // maxDamage
                 damage * 0.75f, // minDamage
                 CollisionClass.PROJECTILE_NO_FF, // collisionClass
@@ -212,4 +207,33 @@ public class SRA_explosionPlugin extends CombatEntityPluginWithParticles {
     public static boolean isWeaponCharging(WeaponAPI weapon) {
         return weapon.getChargeLevel() > 0 && weapon.getCooldownRemaining() <= 0;
     }
+
+	public void spawnMine(ShipAPI source, Vector2f mineLoc) {
+		CombatEngineAPI engine = Global.getCombatEngine();
+		
+		MissileAPI mine = (MissileAPI) engine.spawnProjectile(source, null, 
+															  "SRA_riftcascade_ex_minelayer", 
+															  mineLoc, 
+															  (float) Math.random() * 360f, null);
+		
+		// "spawned" does not include this mine
+		float sizeMult = 1f;
+		mine.setCustomData(RiftCascadeMineExplosion.SIZE_MULT_KEY, sizeMult);
+		if (source != null) {
+			Global.getCombatEngine().applyDamageModifiersToSpawnedProjectileWithNullWeapon(
+											source, WeaponType.ENERGY, false, mine.getDamage());
+		}
+		mine.getDamage().getModifier().modifyMult("mine_sizeMult", sizeMult);
+		float fadeInTime = 0.05f;
+		mine.getVelocity().scale(0);
+		mine.fadeOutThenIn(fadeInTime);
+		//Global.getCombatEngine().addPlugin(createMissileJitterPlugin(mine, fadeInTime));
+		//mine.setFlightTime((float) Math.random());
+		float liveTime = 0f;
+		//liveTime = 0.01f;
+		mine.setFlightTime(mine.getMaxFlightTime() - liveTime);
+		mine.addDamagedAlready(source);
+		mine.setNoMineFFConcerns(true);
+	}
+
 }

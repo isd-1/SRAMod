@@ -86,28 +86,21 @@ public class SRA_riftcascade_exEffect implements BeamEffectPlugin {
 		// "spawned" does not include this mine
 		float sizeMult = getSizeMult();
 		mine.setCustomData(RiftCascadeMineExplosion.SIZE_MULT_KEY, sizeMult);
-		
 		if (source != null) {
 			Global.getCombatEngine().applyDamageModifiersToSpawnedProjectileWithNullWeapon(
 											source, WeaponType.ENERGY, false, mine.getDamage());
 		}
-		
 		mine.getDamage().getModifier().modifyMult("mine_sizeMult", sizeMult);
-		
-		
 		float fadeInTime = 0.05f;
 		mine.getVelocity().scale(0);
 		mine.fadeOutThenIn(fadeInTime);
-		
 		//Global.getCombatEngine().addPlugin(createMissileJitterPlugin(mine, fadeInTime));
-		
 		//mine.setFlightTime((float) Math.random());
 		float liveTime = 0f;
 		//liveTime = 0.01f;
 		mine.setFlightTime(mine.getMaxFlightTime() - liveTime);
 		mine.addDamagedAlready(source);
 		mine.setNoMineFFConcerns(true);
-		
 		prevMineLoc = mineLoc;
 	}
 }

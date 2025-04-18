@@ -6,7 +6,7 @@
   "renderHints":[RENDER_BARREL_BELOW],
 	"type":"ENERGY",
 	"size":"LARGE",
-	"turretSprite":"graphics/weapons/plasma_cannon_turret_base.png",
+	"turretSprite":"graphics/weapons/SRA_T_weapon_supreme_base.png",
 	"turretGlowSprite":"",
 	"hardpointSprite":"",
 	"hardpointGlowSprite":"",

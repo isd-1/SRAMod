@@ -2,51 +2,44 @@
 	"id":"SRA_riftcascade_ex_minelayer_mine",
 	"specClass":"missile",	
 	"missileType":"PHASE_MINE",
-	"sprite":"graphics/missiles/heavy_mine3.png",
-	"glowSprite":"graphics/missiles/heavy_mine3_glow.png",
-	"glowColor":[60,60,255,255], # also used for the NegativeExplosionVisual effect color
+	"sprite":"",
+	"glowSprite":"",
+	"glowColor":[60,60,255,255],
 	"size":[96,96],	
 	"center":[48,48],	
 	"collisionRadius":20,
-	"collisionClass":"NONE",
-	"collisionClassAfterFlameout":"NONE",
+	#"armingTime":1,
+	"collisionClass":"MISSILE_NO_FF",
 	"flameoutTime":0.1, # total time from flameout to full fadeout
 	"fadeTime":0.1, # fadeout duration
 	"noEngineGlowTime":0.05, # time spent without the engine glow being rendered
-	"explosionColor":[100,100,255,255],  # unused
-	"explosionRadius":320, # purely visual
-	"renderTargetIndicator":false, # no target diamond in combat view, not targeted by flares	
+	"explosionColor":[0,0,255,255],  # purely visual, will get a white additively blended core on top of this color
+	"explosionRadius":350, # purely visual	
 	"engineSpec":{"turnAcc":500,
 				  "turnRate":150,
 				  "acc":500,
 				  "dec":500},
 	"behaviorSpec":{"behavior":"PROXIMITY_FUSE",
-					"onExplosionEffect":"data.weapons.SRA_riftcascade_ex_minelayerExplosion",
-					"range":0,
+					"range":640,
 					"slowToMaxSpeed":true,
-					"delay":0.5,
-					#"pingSound":"launch_flare_1",
-					#"pingColor":[175,100,255,255],
-					"pingColor":[100,60,255,255],
-					"mineHasNoSprite":true,
-					"flashRateMult":0.25,
-					"pingRadius":100,
-					"pingDuration":0.25,
+					"delay":0.1,
+					"pingColor":[0,0,211,255],
+					"pingRadius":640,
+					"pingDuration":0.1,
 					"windupSound":"riftcascade_windup",
-					"windupDelay":0.3,
-					"explosionSpec":{"duration":1f,
-									 "radius":320,
-									 "coreRadius":160, # full damage within core radius
-									 "collisionClass":PROJECTILE_FF,
-									 "collisionClassByFighter":PROJECTILE_FF,
-									 "particleSizeMin":3.0,
-									 "particleSizeRange":3.0,
-									 "particleDuration":1,
+					"windupDelay":0.1,
+					"explosionSpec":{"duration":5f,
+									 "radius":640,
+									 "coreRadius":320, # full damage within core radius
+									 "collisionClass":MISSILE_FF,
+									 "collisionClassByFighter":MISSILE_FF,
+									 "particleSizeMin":5.0,
+									 "particleSizeRange":15.0,
+									 "particleDuration":5,
 									 "particleCount":200,
 									 "particleColor":[70,70,211,255],
 									 "explosionColor":[70,70,211,255],
 									 "useDetailedExplosion":true,
-									 "sound":"SRA_star_eater_weapon_hit_01"},
-					}
+									 "sound":"riftcascade_rift"},
+					}	
 }
-

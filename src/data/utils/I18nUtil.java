@@ -9,9 +9,9 @@ import java.awt.*;
  * Modified from Originem's CMC by Nitori_Tachyon and homejerry99
  */
 public class I18nUtil {
-    private static final String CATE_SHIP_SYSTEM = "shipSystem";
-    private static final String CATE_STAR_SYSTEMS = "starSystems";
-    private static final String CATE_HULL_MOD = "hullMod";
+    private static final String CATE_SHIP_SYSTEM = "ShipSystem";
+    private static final String CATE_STAR_SYSTEMS = "StarSystems";
+    private static final String CATE_HULL_MOD = "HullMod";
 
     public static String getString(String category, String id) {
         return Global.getSettings().getString(category, id);

@@ -13,6 +13,7 @@
   "viewOffset": 0,
   "builtInMods": [
     "SRA_core",
+    "SRA_speed_aura",
     "advancedcore",
     "operations_center"
   ],
