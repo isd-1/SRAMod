@@ -108,7 +108,7 @@ public class SRA_explosionPlugin extends CombatEntityPluginWithParticles {
     }
     //无光效爆炸
     public DamagingExplosionSpec SRA_T_weapon_supremeshot_explosion(DamagingProjectileAPI proj) {
-        float damage = 6400;
+        float damage = 3200;
         DamagingExplosionSpec Explosion=new DamagingExplosionSpec(
                 0.05f, // duration
                 160f, // radius
@@ -132,7 +132,7 @@ public class SRA_explosionPlugin extends CombatEntityPluginWithParticles {
 
     //正常爆炸
     public DamagingExplosionSpec SRA_T_weapon_supremeshot_explosion2(DamagingProjectileAPI proj) {
-        float damage = 6400;
+        float damage = 3200;
         DamagingExplosionSpec Explosion=new DamagingExplosionSpec(
                 0.1f, // duration
                 160f, // radius
@@ -156,7 +156,7 @@ public class SRA_explosionPlugin extends CombatEntityPluginWithParticles {
 
     //击中护盾时的爆炸
     public DamagingExplosionSpec SRA_T_weapon_supremeshot_explosion3(DamagingProjectileAPI proj) {
-        float damage = 6400;
+        float damage = 3200;
         DamagingExplosionSpec Explosion=new DamagingExplosionSpec(
                 0.05f, // duration
                 160f, // radius
