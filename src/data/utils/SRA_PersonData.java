@@ -6,7 +6,7 @@ import com.fs.starfarer.api.characters.PersonAPI;
 import com.fs.starfarer.api.impl.campaign.ids.Personalities;
 import com.fs.starfarer.api.impl.campaign.ids.Ranks;
 import com.fs.starfarer.api.impl.campaign.ids.Skills;
-import data.utils.I18nUtil;
+import data.utils.SRAI18nUtil;
 
 ////////////////////////
 ///这是一个军官数据库///

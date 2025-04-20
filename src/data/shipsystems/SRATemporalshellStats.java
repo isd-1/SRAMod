@@ -14,7 +14,7 @@ import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
-import data.utils.I18nUtil;
+import data.utils.SRAI18nUtil;
 
 public class SRATemporalshellStats extends BaseShipSystemScript {
 
@@ -172,7 +172,7 @@ public class SRATemporalshellStats extends BaseShipSystemScript {
 
     public StatusData getStatusData(int index, State state, float effectLevel) {
         if (index == 0) {
-            return new StatusData(I18nUtil.getShipSystemString("SRA_TemporalshellInfo"), false);
+            return new StatusData(SRAI18nUtil.getShipSystemString("SRA_TemporalshellInfo"), false);
         }
         return null;
     }

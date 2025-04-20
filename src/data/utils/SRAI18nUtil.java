@@ -8,7 +8,7 @@ import java.awt.*;
 /**
  * Modified from Originem's CMC by Nitori_Tachyon and homejerry99
  */
-public class I18nUtil {
+public class SRAI18nUtil {
     private static final String CATE_SHIP_SYSTEM = "ShipSystem";
     private static final String CATE_STAR_SYSTEMS = "StarSystems";
     private static final String CATE_HULL_MOD = "HullMod";

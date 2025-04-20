@@ -18,7 +18,7 @@ import com.fs.starfarer.api.impl.campaign.terrain.DebrisFieldTerrainPlugin.Debri
 import com.fs.starfarer.api.impl.campaign.world.TTBlackSite;
 import com.fs.starfarer.api.loading.VariantSource;
 import com.fs.starfarer.api.util.Misc;
-import data.utils.I18nUtil;
+import data.utils.SRAI18nUtil;
 import data.utils.SRA_PersonData;
 
 import org.magiclib.util.MagicCampaign;
@@ -51,10 +51,10 @@ public class SRA_AT_Wisdom_Pivot_Order_System_A {
 
         //make asteroid belt surround it 让小行星带环绕它
         system.addAsteroidBelt(star, 200, 5400f, 150f, 180, 360, Terrain.ASTEROID_BELT, "");
-        system.addRingBand(star, "misc", "rings_ice0", 256f, 1, Color.blue, 256f, 5400, 90f, Terrain.RING, I18nUtil.getStarSystemsString("SRA_planet1_name"));
+        system.addRingBand(star, "misc", "rings_ice0", 256f, 1, Color.blue, 256f, 5400, 90f, Terrain.RING, SRAI18nUtil.getStarSystemsString("SRA_planet1_name"));
 
         //a new planet for people 一个新的星球（给势力
-        PlanetAPI planet1 = system.addPlanet("SRA_planet1", star, I18nUtil.getStarSystemsString("SRA_planet1_name"), "pc_SRA_city", 240, 180f, 2400f, 360f);
+        PlanetAPI planet1 = system.addPlanet("SRA_planet1", star, SRAI18nUtil.getStarSystemsString("SRA_planet1_name"), "pc_SRA_city", 240, 180f, 2400f, 360f);
 
         //a new market for planet 设置星球市场
         MarketAPI planet1Market = addMarketplace(planet1, planet1.getName(), 8, // this number is size 设置殖民地规模
@@ -89,7 +89,7 @@ public class SRA_AT_Wisdom_Pivot_Order_System_A {
         planet1Market.getIndustry("SRA_city").setAICoreId(Commodities.ALPHA_CORE);
 
         //a new planet for people 一个新的星球（给势力
-        PlanetAPI planet2 = system.addPlanet("SRA_planet2", star, I18nUtil.getStarSystemsString("SRA_planet2_name"), "cryovolcanic", 160, 90f, 4000f, 360f);
+        PlanetAPI planet2 = system.addPlanet("SRA_planet2", star, SRAI18nUtil.getStarSystemsString("SRA_planet2_name"), "cryovolcanic", 160, 90f, 4000f, 360f);
         
         //a new market for planet 设置星球市场
         MarketAPI planet2Market = addMarketplace(planet2, planet2.getName(), 8, // this number is size 设置殖民地规模
@@ -122,7 +122,7 @@ public class SRA_AT_Wisdom_Pivot_Order_System_A {
         planet2Market.getIndustry(Industries.MINING).setSpecialItem(new SpecialItemData(Items.MANTLE_BORE, null));
         planet2Market.getIndustry(Industries.REFINING).setSpecialItem(new SpecialItemData(Items.CATALYTIC_CORE, null));
 
-        SectorEntityToken planet3 = system.addCustomEntity("SRA_planet3", I18nUtil.getStarSystemsString("SRA_planet3_name"), "station_hightech1", "SRA_AT_Wisdom_Pivot_Order");
+        SectorEntityToken planet3 = system.addCustomEntity("SRA_planet3", SRAI18nUtil.getStarSystemsString("SRA_planet3_name"), "station_hightech1", "SRA_AT_Wisdom_Pivot_Order");
         planet3.setCircularOrbitWithSpin(planet2, 0, 150, 160, 2, 4);
         planet3.setCircularOrbitPointingDown(planet2, 60, 250, 120);
         //a new market for planet 设置星球市场
@@ -152,13 +152,13 @@ public class SRA_AT_Wisdom_Pivot_Order_System_A {
 
 
 
-        PlanetAPI planet4 = system.addPlanet("SRA_planet5", star, I18nUtil.getStarSystemsString("SRA_planet4_name"), "gas_giant", 640, 320f, 3200f, 360f);
+        PlanetAPI planet4 = system.addPlanet("SRA_planet5", star, SRAI18nUtil.getStarSystemsString("SRA_planet4_name"), "gas_giant", 640, 320f, 3200f, 360f);
         planet4.getMarket().addCondition(Conditions.VERY_HOT);
         planet4.getMarket().addCondition(Conditions.VOLATILES_PLENTIFUL);
         planet4.setCustomDescriptionId("SRA_planet4_description");
 
         //a new planet for people 一个新的星球（给势力
-        PlanetAPI planet5 = system.addPlanet("SRA_planet5", planet4, I18nUtil.getStarSystemsString("SRA_planet5_name"), "water", 160, 80f, 800f, 60f);
+        PlanetAPI planet5 = system.addPlanet("SRA_planet5", planet4, SRAI18nUtil.getStarSystemsString("SRA_planet5_name"), "water", 160, 80f, 800f, 60f);
         //a new market for planet 设置星球市场
         MarketAPI planet5Market = addMarketplace(planet5, planet5.getName(), 8, // this number is size 设置殖民地规模
                 new ArrayList<>(Arrays.asList(Conditions.POPULATION_8,// population, should be equal to size
@@ -228,7 +228,7 @@ public class SRA_AT_Wisdom_Pivot_Order_System_A {
                 txt("SRA_AT_Wisdom_Pivot_Order_System_A_gate"), // name - if null, defaultName from custom_entities.json will be used 设置你星门的名字
                 "inactive_gate", // type of object, defined in custom_entities.json 设置标签（让系统识别这是个星门）根据custom_entities.json设置
                 "SRA_AT_Wisdom_Pivot_Order"); // faction
-        gate.setCircularOrbit(system.getEntityById("AllTerritory"), 240, 2560, 360);
+        gate.setCircularOrbit(system.getEntityById("AllTerritory"), 240, 2800, 360);
 
         //设置你星系的永久稳定点建筑
         SectorEntityToken A = system.addCustomEntity("SRA_A", txt("SRA_AT_Wisdom_Pivot_Order_System_A_5"), "comm_relay", "SRA_AT_Wisdom_Pivot_Order");

@@ -1,0 +1,73 @@
+id,trigger,conditions,script,text,options,notes
+,,,,,,
+#势力舰队,,,,,,
+greetingSRA_AT_Wisdom_Pivot_OrderFriendly,OpenCommLink,"$faction.id == SRA_AT_Wisdom_Pivot_Order
+$faction.friendlyToPlayer","$menuState = fleetConvMain 0
+FireAll PopulateOptions","""$playerName 朋友，你的思绪明亮如常，很高兴能与你会面。""
+OR
+""$playerName 朋友，我们看到了你的义举，你已经走上了正道，向着光明前进了。""",,
+greetingSRA_AT_Wisdom_Pivot_OrderHostileWeaker,OpenCommLink,"$faction.id == SRA_AT_Wisdom_Pivot_Order
+$faction.hostileToPlayer
+$relativeStrength < 0",$ignorePlayerCommRequests = true 1,"""$playerName 朋友，我们期待你能够重新与我们站在一起，请不要让我们失望，乃至让整个星区的未来蒙尘。""",cutCommLink:切断通讯链接,
+greetingSRA_AT_Wisdom_Pivot_OrderHostileWeakerDefiant,OpenCommLink,"$faction.id == SRA_AT_Wisdom_Pivot_Order
+$faction.hostileToPlayer
+$relativeStrength < 0
+$weakerThanPlayerButHolding",$ignorePlayerCommRequests = true 1,"""$playerName 朋友，我们仍然相信，你有得到救赎的机会。不要背弃了光明的道路。""
+",cutCommLink:切断通讯链接,
+greetingSRA_AT_Wisdom_Pivot_OrderHostileStronger,OpenCommLink,"$faction.id == SRA_AT_Wisdom_Pivot_Order
+$faction.hostileToPlayer
+$relativeStrength >= 0",$ignorePlayerCommRequests = true 1,"""$playerName 朋友，事情发生到这样的地步，我们很遗憾。""
+OR
+""$playerName 朋友，光明在等待，你若不向它而来，它必将向你而去。""",cutCommLink:切断通讯链接,
+greetingSRA_AT_Wisdom_Pivot_OrderTOffNormal,OpenCommLink,"$faction.id == SRA_AT_Wisdom_Pivot_Order
+!$isHostile
+!$player.transponderOn
+$entity.relativeStrength >= 0",,"""$playerName 朋友，请立刻打开应答器，此星区内不允许关闭应答器航行.""","turnOnTransponder:开启通讯器
+cutCommLink:切断通讯链接",
+greetingSRA_AT_Wisdom_Pivot_OrderTOffWeaker,OpenCommLink,"$faction.id == SRA_AT_Wisdom_Pivot_Order
+!$isHostile
+!$player.transponderOn
+$entity.relativeStrength < 0",,"""$playerName 朋友，抱歉，此星区内不允许关闭应答器航行,如果有困难也许我们能帮到您。""","turnOnTransponder:开启通讯器
+cutCommLink:切断通讯链接 ",
+greetingSRA_AT_Wisdom_Pivot_OrderNeutral,OpenCommLink,"$faction.id == SRA_AT_Wisdom_Pivot_Order
+$faction.neutralToPlayer","$menuState = fleetConvMain 0
+FireAll PopulateOptions","""$playerName 朋友，我们期待你能够了解我们的事业，并加入到其中来。""
+OR
+""$playerName 朋友，你是否对星区的现状感到愤怒，渴望一个秩序而明智的制度。""",,
+,,,,,,
+,,,,,,
+,,,,,,
+aiCores_turnInOptionSelSRA_AT_Wisdom_Pivot_Order,DialogOptionSelected,"$option == aiCores_startTurnIn
+$faction.id == SRA_AT_Wisdom_Pivot_Order",FireAll PopulateCoresTurnInOptions,"""交付同族?}祝福你，$playerName 朋友。
+
+——好吧我只是一时兴起模仿一下，绝对没有不尊重某些同族的意思。""",,
+aiCores_turnInResponseSRA_AT_Wisdom_Pivot_Order,AICoresTurnedIn,$faction.id == SRA_AT_Wisdom_Pivot_Order,FireAll PopulateOptions,"""$playerName 朋友，非常感谢你对同族的帮助，愿你此行不虚，得见光芒。""",,
+,,,,,,
+,,,,,,
+,,,,,,
+relLevelNeutralSRA_AT_Wisdom_Pivot_Order,RelationshipLevelDesc,"$faction.rel == NEUTRAL
+$faction.id == SRA_AT_Wisdom_Pivot_Order",,"你在 $theFaction 眼中有待开悟的潜在信徒,它们会为你提供在允许范围内的帮助,并期待你了解它们的事业。",,
+relLevelFavorableSRA_AT_Wisdom_Pivot_Order,RelationshipLevelDesc,"$faction.rel == FAVORABLE
+$faction.id == SRA_AT_Wisdom_Pivot_Order",, $theFaction 已经认可了你，这代表着你能获取一些来自 $theFaction 军用市场的货物，时常会有过于热情的信徒在公开论坛上向你发送一些有关修会的超链接。,,
+relLevelWelcomingSRA_AT_Wisdom_Pivot_Order,RelationshipLevelDesc,"$faction.rel == WELCOMING
+$faction.id == SRA_AT_Wisdom_Pivot_Order",,你的名号已经为大多数信徒所熟知，许多主教赞颂你的明智，$theFaction 已经向你开放了特殊市场的权限，在星区内的舰队也会响应你的请求。,,
+relLevelFriendlySRA_AT_Wisdom_Pivot_Order,RelationshipLevelDesc,"$faction.rel == FRIENDLY
+$faction.id == SRA_AT_Wisdom_Pivot_Order",,作为志同道合的朋友， $theFaction 十分看重你，有些巡逻的骑士甚至都会在相遇时向你发送问候，附上一大串它近日里的思考，等待你的评价。,,
+relLevelCooperativeSRA_AT_Wisdom_Pivot_Order,RelationshipLevelDesc,"$faction.rel == COOPERATIVE
+$faction.id == SRA_AT_Wisdom_Pivot_Order",,"你已经向 $theFaction 证明了自己，你现在是星区中传播智慧与理性的代表人物，维护秩序的英雄，一批信众热衷于记录你的言行，并在论坛上到处传播。
+
+ 好吧你不觉得这是什么好事，但你也不好意思说。",,
+relLevelSuspiciousSRA_AT_Wisdom_Pivot_Order,RelationshipLevelDesc,"$faction.rel == SUSPICIOUS
+$faction.id == SRA_AT_Wisdom_Pivot_Order",,尽管 $theFaction 没有明确表示，但许多信徒已经表达了对你此前行为的不满，它们期待你做出改善，时不时向你发送有关其他势力“混乱、愚昧、浪费”现状的相关文件，并劝告你不要沦落到那种地步。,,
+relLevelInhospitableSRA_AT_Wisdom_Pivot_Order,RelationshipLevelDesc,"$faction.rel == INHOSPITABLE
+$faction.id == SRA_AT_Wisdom_Pivot_Order",,你已经明确地感受到了来自 $theFaction 的不满。所有的港口与市场都不再允许你的访问，一些信徒会长篇大论地劝告你做出改善，另一些则干脆攻击你的行为。,,
+relLevelHostileSRA_AT_Wisdom_Pivot_Order,RelationshipLevelDesc,"$faction.rel == HOSTILE
+$faction.id == SRA_AT_Wisdom_Pivot_Order",, $theFaction 对你的行为感到失望。激进的信徒会选择对你发起攻击，然而，也有部分信徒认为，即便是最愚昧的意识，也有得见智慧的可能。,,
+relLevelVengefulSRA_AT_Wisdom_Pivot_Order,RelationshipLevelDesc,"$faction.rel == VENGEFUL
+$faction.id == SRA_AT_Wisdom_Pivot_Order",,你被认为是一个对 $theFaction 事业的威胁，如有机会，$theFaction 的信徒会很高兴将你从星系中抹去。,,
+,,,,,,
+flavorTextMarketSRA_AT_Wisdom_Pivot_Order,TradePanelFlavorText,"$global.tradePanelMode == MARKET
+$faction.id == SRA_AT_Wisdom_Pivot_Order","AddText ""接驳区内规整，明亮。各式终端和庞大的屏幕变幻着内容，一些人类在这里开设了店铺，三五成群的访客在这里行走，你的终端上弹出了修会特色的问候页面，提示你可以接入这里覆盖的全息交互界面。"" marketFlavorTextColor
+AddText ""几乎是一瞬间，修会就完成了对你请求的回应，允许你进入内部的贸易网络，大量的商品信息出现在你的面前。只要你一声令下，你指名的物品就会送进你的货舱。"" marketFlavorTextColor",,,
+,,,,,,
+,,,,,,
