@@ -1,0 +1,23 @@
+{
+	"pc_SRA_city":{
+		"name":"流光星界",
+		"tilt":-27, # left-right (>0 tilts to the left)
+		"pitch":4, # towards-away from the viewer (>0 pitches towards)
+		"rotation":-5, # degrees/second
+		"planetColor":[255,255,255,255],
+		"atmosphereThickness":2, # as fraction of radius.  Set to 0 for no atmosphere
+		"atmosphereThicknessMin":12, #  minimum thickness in pixels
+		"atmosphereColor":[100,120,160,155],
+		"texture":"graphics/planets/pc_SRA_city.png",
+		"icon":"graphics/warroom/icon_planet.png",
+		"iconColor":[102,103,106,255],
+		"isStar":false,
+		"lightPosition":[-2,-8,10], # in planet radii.  Not used for stars.  z > 0 is above the playing field.
+	},
+	
+}
+
+
+
+
+

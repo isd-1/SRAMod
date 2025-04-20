@@ -14,29 +14,34 @@
 		"SRA_Person_Name1":"星规",
 		"SRA_Person_Name2":"路希维亚",
 		"SRA_Person_Name3":"希德拉",
-		"MARKET_1":"这里不接受退回亦或出售",
-		"MARKET_2":"抱歉，您的信誉暂时还未达标[好感：欢迎]",
-		"MARKET_3":"这里不接受退回亦或出售"
+		"SRA_MARKET_1":"这里不接受退回亦或出售",
+		"SRA_MARKET_2":"抱歉，您的信誉暂时还未达标[好感：欢迎]",
+		"SRA_MARKET_3":"这里不接受退回亦或出售"
 		
 	  },
     "StarSystems":{
-		"SRA_planet1_name":"弧光前哨",
+		"SRA_planet1_name":"弧光灯塔",
 		"SRA_planet2_name":"无尽矿藏",
-		"SRA_planet3_name":"Terminal",
-		"SRA_planet4_name":"铸造万物"
+		"SRA_planet3_name":"铸造万物",
+		"SRA_planet4_name":"炽热云峦",
+		"SRA_planet5_name":"无垠静海",
+		"SRA_ring1_name":"往日遗尘"
 	  },
 
 	"scripts":{
 		"SRA_city_1":"苍宇辉虹",
 	
+		"SRA_AT_Wisdom_Pivot_Order_System_A_coronal_tap":"全域智枢修会-星冕分流器",
+		"SRA_AT_Wisdom_Pivot_Order_System_A_derelict_cryosleeper":"全域智枢修会-低温休眠舰",
+		
 		"SRA_AT_Wisdom_Pivot_Order_System_A_gate": "彼方之门扉",
-		"SRA_AT_Wisdom_Pivot_Order_System_A_1":"全域智枢修会跳跃点",
+		"SRA_AT_Wisdom_Pivot_Order_System_A_1":"全域智枢修会-跳跃点",
 		"SRA_AT_Wisdom_Pivot_Order_System_A_2":"废弃的勘探母舰",
-		"SRA_AT_Wisdom_Pivot_Order_System_A_3":"全域智枢修会空间站",
-		"SRA_AT_Wisdom_Pivot_Order_System_A_4":"咕咕的风筝",
-		"SRA_AT_Wisdom_Pivot_Order_System_A_5":"全域智枢修会通讯基座",
-		"SRA_AT_Wisdom_Pivot_Order_System_A_6":"全域智枢修会导航浮标",
-		"SRA_AT_Wisdom_Pivot_Order_System_A_7":"全域智枢修会传感器阵列",
+		"SRA_AT_Wisdom_Pivot_Order_System_A_3":"全域智枢修会-空间站",
+		"SRA_AT_Wisdom_Pivot_Order_System_A_4":"并没有用上的命名",
+		"SRA_AT_Wisdom_Pivot_Order_System_A_5":"全域智枢修会-通讯基座",
+		"SRA_AT_Wisdom_Pivot_Order_System_A_6":"全域智枢修会-导航浮标",
+		"SRA_AT_Wisdom_Pivot_Order_System_A_7":"全域智枢修会-传感器阵列",
 		"SRA_AT_Wisdom_Pivot_Order_System_A_8":"星穹之矛",
 		"SRA_AT_Wisdom_Pivot_Order_System_A_9":"璀璨星河"
 	

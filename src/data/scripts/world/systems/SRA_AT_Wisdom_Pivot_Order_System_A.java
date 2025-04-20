@@ -4,11 +4,13 @@ import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.*;
 import com.fs.starfarer.api.campaign.econ.EconomyAPI;
 import com.fs.starfarer.api.campaign.econ.MarketAPI;
+import com.fs.starfarer.api.campaign.econ.MarketConditionAPI;
 import com.fs.starfarer.api.characters.PersonAPI;
 import com.fs.starfarer.api.fleet.FleetMemberAPI;
 import com.fs.starfarer.api.impl.campaign.fleets.FleetFactoryV3;
 import com.fs.starfarer.api.impl.campaign.ids.*;
 import com.fs.starfarer.api.impl.campaign.procgen.StarSystemGenerator;
+import com.fs.starfarer.api.impl.campaign.procgen.themes.BaseThemeGenerator.EntityLocation;
 import com.fs.starfarer.api.impl.campaign.procgen.themes.SalvageSpecialAssigner;
 import com.fs.starfarer.api.impl.campaign.rulecmd.salvage.special.ShipRecoverySpecial;
 import com.fs.starfarer.api.impl.campaign.terrain.DebrisFieldTerrainPlugin.DebrisFieldParams;
@@ -49,10 +51,10 @@ public class SRA_AT_Wisdom_Pivot_Order_System_A {
 
         //make asteroid belt surround it 让小行星带环绕它
         system.addAsteroidBelt(star, 200, 5400f, 150f, 180, 360, Terrain.ASTEROID_BELT, "");
-        system.addRingBand(star, "misc", "rings_ice0", 256f, 1, Color.blue, 256f, 5400, 90f, Terrain.RING, "星浮环");
+        system.addRingBand(star, "misc", "rings_ice0", 256f, 1, Color.blue, 256f, 5400, 90f, Terrain.RING, I18nUtil.getStarSystemsString("SRA_planet1_name"));
 
         //a new planet for people 一个新的星球（给势力
-        PlanetAPI planet1 = system.addPlanet("SRA_planet1", star, I18nUtil.getStarSystemsString("SRA_planet1_name"), "terran", 215, 180f, 3600f, 365f);
+        PlanetAPI planet1 = system.addPlanet("SRA_planet1", star, I18nUtil.getStarSystemsString("SRA_planet1_name"), "pc_SRA_city", 240, 180f, 2400f, 360f);
 
         //a new market for planet 设置星球市场
         MarketAPI planet1Market = addMarketplace(planet1, planet1.getName(), 8, // this number is size 设置殖民地规模
@@ -76,40 +78,56 @@ public class SRA_AT_Wisdom_Pivot_Order_System_A {
         //make a custom description which is specified in descriptions.csv    引用星球介绍位置
         planet1.setCustomDescriptionId("SRA_planet1_description");
 
-        //give the orbital works a gamma core   给轨道工程一个核心和一个纳米炉
+        //give the orbital works a gamma core   给轨道工业一个核心和一个纳米炉
         planet1Market.getIndustry(Industries.ORBITALWORKS).setAICoreId(Commodities.ALPHA_CORE);
         planet1Market.getIndustry(Industries.ORBITALWORKS).setSpecialItem(new SpecialItemData(Items.PRISTINE_NANOFORGE, null));
-
         //then give designed command a blue core 给最高指挥部一个核心和一个低温引擎
         planet1Market.getIndustry(Industries.HIGHCOMMAND).setAICoreId(Commodities.ALPHA_CORE);
         planet1Market.getIndustry(Industries.HIGHCOMMAND).setSpecialItem(new SpecialItemData(Items.CRYOARITHMETIC_ENGINE, null));
-        
         //给两个全域建筑核心
         planet1Market.getIndustry("AT_Remnant_Station").setAICoreId(Commodities.ALPHA_CORE);
         planet1Market.getIndustry("SRA_city").setAICoreId(Commodities.ALPHA_CORE);
 
         //a new planet for people 一个新的星球（给势力
-        PlanetAPI planet2 = system.addPlanet("SRA_planet2", star, I18nUtil.getStarSystemsString("SRA_planet2_name"), "terran-eccentric", 160, 90f, 2300f, 265f);
+        PlanetAPI planet2 = system.addPlanet("SRA_planet2", star, I18nUtil.getStarSystemsString("SRA_planet2_name"), "cryovolcanic", 160, 90f, 4000f, 360f);
+        
+        //a new market for planet 设置星球市场
+        MarketAPI planet2Market = addMarketplace(planet2, planet2.getName(), 8, // this number is size 设置殖民地规模
+                new ArrayList<>(Arrays.asList(Conditions.POPULATION_8, // population, should be equal to size
+                        Conditions.NO_ATMOSPHERE,
+                        Conditions.RUINS_WIDESPREAD,
+                        Conditions.ORE_ULTRARICH,
+                        Conditions.RARE_ORE_ULTRARICH,
+                        Conditions.VOLATILES_PLENTIFUL,
+                        Conditions.ORGANICS_PLENTIFUL
+                        )),
+                new ArrayList<>(Arrays.asList(Submarkets.GENERIC_MILITARY,
+                        Submarkets.SUBMARKET_BLACK,
+                        Submarkets.SUBMARKET_OPEN,
+                        Submarkets.SUBMARKET_STORAGE)),
+                new ArrayList<>(Arrays.asList(
+                        Industries.POPULATION,
+                        Industries.MEGAPORT,
+                        "AT_Remnant_Station",
+                        Industries.HEAVYBATTERIES,
+                        Industries.MINING,
+                        Industries.REFINING,
+                        Industries.WAYSTATION
+                        )));
         //make a custom description which is specified in descriptions.csv    引用星球介绍位置
         planet2.setCustomDescriptionId("SRA_planet2_description");
-        planet2.getMarket().addCondition(Conditions.INIMICAL_BIOSPHERE);
-        planet2.getMarket().addCondition(Conditions.ORE_ULTRARICH);
-        planet2.getMarket().addCondition(Conditions.RARE_ORE_ULTRARICH);
-        planet2.getMarket().addCondition(Conditions.RUINS_WIDESPREAD);
-        planet2.getMarket().addCondition(Conditions.METEOR_IMPACTS);
+        planet2Market.getIndustry("AT_Remnant_Station").setAICoreId(Commodities.ALPHA_CORE);
+        planet2Market.getIndustry(Industries.MINING).setAICoreId(Commodities.ALPHA_CORE);
+        planet2Market.getIndustry(Industries.REFINING).setAICoreId(Commodities.ALPHA_CORE);
+        planet2Market.getIndustry(Industries.MINING).setSpecialItem(new SpecialItemData(Items.MANTLE_BORE, null));
+        planet2Market.getIndustry(Industries.REFINING).setSpecialItem(new SpecialItemData(Items.CATALYTIC_CORE, null));
 
-        system.addRingBand(planet2, "misc", "rings_ice0", 256f, 1, Color.blue, 256f, 400, 90f, Terrain.RING, "星浮环");
-        //a new planet for people 一个新的星球（给势力
-        PlanetAPI planet3 = system.addPlanet("SRA_planet3", star, I18nUtil.getStarSystemsString("SRA_planet3_name"), "frozen", 130, 80f, 4700f, 400f);
-        //make a custom description which is specified in descriptions.csv    引用星球介绍位置
-        //planet3.setCustomDescriptionId("SRA_planet3_description");
-
-        SectorEntityToken planet4 = system.addCustomEntity("SRA_planet4", I18nUtil.getStarSystemsString("SRA_planet4_name"), "station_hightech1", "SRA_AT_Wisdom_Pivot_Order");
-        planet4.setCircularOrbitWithSpin(planet2, 0, 150, 160, 2, 4);
-        planet4.setCircularOrbitPointingDown(planet2, 60, 250, 120);
+        SectorEntityToken planet3 = system.addCustomEntity("SRA_planet3", I18nUtil.getStarSystemsString("SRA_planet3_name"), "station_hightech1", "SRA_AT_Wisdom_Pivot_Order");
+        planet3.setCircularOrbitWithSpin(planet2, 0, 150, 160, 2, 4);
+        planet3.setCircularOrbitPointingDown(planet2, 60, 250, 120);
         //a new market for planet 设置星球市场
-        MarketAPI planet4Market = addMarketplace(planet4, planet4.getName(), 2, // this number is size 设置殖民地规模
-                new ArrayList<>(Collections.singletonList(Conditions.POPULATION_2// population, should be equal to size
+        MarketAPI planet3Market = addMarketplace(planet3, planet3.getName(), 8, // this number is size 设置殖民地规模
+                new ArrayList<>(Collections.singletonList(Conditions.POPULATION_8// population, should be equal to size
                 )),
                 new ArrayList<>(Arrays.asList(Submarkets.GENERIC_MILITARY,
                         Submarkets.SUBMARKET_BLACK,
@@ -117,14 +135,62 @@ public class SRA_AT_Wisdom_Pivot_Order_System_A {
                         Submarkets.SUBMARKET_STORAGE)),
                 new ArrayList<>(Arrays.asList(Industries.POPULATION,
                         Industries.MEGAPORT,
-                        Industries.ORBITALSTATION_HIGH,
+                        "AT_Remnant_Station",
                         Industries.HEAVYBATTERIES,
-                        Industries.MILITARYBASE)));
+                        Industries.HIGHCOMMAND,
+                        Industries.REFINING,
+                        Industries.FUELPROD
+                        )));
+        planet3.setCustomDescriptionId("SRA_planet3_description");
+        //ai核心
+        planet3Market.getIndustry(Industries.HIGHCOMMAND).setAICoreId(Commodities.ALPHA_CORE);
+        planet3Market.getIndustry("AT_Remnant_Station").setAICoreId(Commodities.ALPHA_CORE);
+        planet3Market.getIndustry(Industries.REFINING).setAICoreId(Commodities.ALPHA_CORE);
+        planet3Market.getIndustry(Industries.FUELPROD).setAICoreId(Commodities.ALPHA_CORE);
+        planet3Market.getIndustry(Industries.REFINING).setSpecialItem(new SpecialItemData(Items.CATALYTIC_CORE, null));
+        planet3Market.getIndustry(Industries.FUELPROD).setSpecialItem(new SpecialItemData(Items.SYNCHROTRON, null));
+
+
+
+        PlanetAPI planet4 = system.addPlanet("SRA_planet5", star, I18nUtil.getStarSystemsString("SRA_planet4_name"), "gas_giant", 640, 320f, 3200f, 360f);
+        planet4.getMarket().addCondition(Conditions.VERY_HOT);
+        planet4.getMarket().addCondition(Conditions.VOLATILES_PLENTIFUL);
         planet4.setCustomDescriptionId("SRA_planet4_description");
 
+        //a new planet for people 一个新的星球（给势力
+        PlanetAPI planet5 = system.addPlanet("SRA_planet5", planet4, I18nUtil.getStarSystemsString("SRA_planet5_name"), "water", 160, 80f, 800f, 60f);
+        //a new market for planet 设置星球市场
+        MarketAPI planet5Market = addMarketplace(planet5, planet5.getName(), 8, // this number is size 设置殖民地规模
+                new ArrayList<>(Arrays.asList(Conditions.POPULATION_8,// population, should be equal to size
+                    Conditions.WATER_SURFACE,
+                    Conditions.ORE_ULTRARICH,
+                    Conditions.RARE_ORE_ULTRARICH,
+                    Conditions.RUINS_VAST,
+                    Conditions.ORGANICS_PLENTIFUL
+                )),
+                new ArrayList<>(Arrays.asList(Submarkets.GENERIC_MILITARY,
+                        Submarkets.SUBMARKET_BLACK,
+                        Submarkets.SUBMARKET_OPEN,
+                        Submarkets.SUBMARKET_STORAGE)),
+                new ArrayList<>(Arrays.asList(Industries.POPULATION,
+                        Industries.MEGAPORT,
+                        "AT_Remnant_Station",
+                        Industries.HEAVYBATTERIES,
+                        Industries.FARMING,
+                        Industries.LIGHTINDUSTRY,
+                        Industries.COMMERCE
+                        )));
+        //make a custom description which is specified in descriptions.csv    引用星球介绍位置
+        planet5.setCustomDescriptionId("SRA_planet5_description");
         //ai核心
-        planet4Market.getIndustry(Industries.MILITARYBASE).setAICoreId(Commodities.ALPHA_CORE);
-        planet4Market.getIndustry(Industries.ORBITALSTATION_HIGH).setAICoreId(Commodities.ALPHA_CORE);
+        planet5Market.getIndustry("AT_Remnant_Station").setAICoreId(Commodities.ALPHA_CORE);
+        planet5Market.getIndustry(Industries.FARMING).setAICoreId(Commodities.ALPHA_CORE);
+        planet5Market.getIndustry(Industries.LIGHTINDUSTRY).setAICoreId(Commodities.ALPHA_CORE);
+        planet5Market.getIndustry(Industries.COMMERCE).setAICoreId(Commodities.ALPHA_CORE);
+        planet5Market.getIndustry(Industries.FARMING).setSpecialItem(new SpecialItemData(Items.SOIL_NANITES, null));
+        planet5Market.getIndustry(Industries.LIGHTINDUSTRY).setSpecialItem(new SpecialItemData(Items.BIOFACTORY_EMBRYO, null));
+        planet5Market.getIndustry(Industries.COMMERCE).setSpecialItem(new SpecialItemData(Items.DEALMAKER_HOLOSUITE, null));
+
 
         // generates hyperspace destinations for in-system jump points  为星系生成指定跳跃点
         JumpPointAPI jumpPoint = Global.getFactory().createJumpPoint("SRA_jump_point", txt("SRA_AT_Wisdom_Pivot_Order_System_A_1"));
@@ -143,16 +209,26 @@ public class SRA_AT_Wisdom_Pivot_Order_System_A {
         // SRAStation.setMarket(planet1Market);
 
         // planet1Market.getConnectedEntities().add(SRAStation);
+        
+        //嗨嗨嗨，分流器来咯
+        SectorEntityToken SRAcoronal_tap = system.addCustomEntity("coronal_tap", txt("SRA_AT_Wisdom_Pivot_Order_System_A_coronal_tap"), "coronal_tap", "neutral");
+        SRAcoronal_tap.setCircularOrbitPointingDown(star, 0, 900, 60);
+        SRAcoronal_tap.setCustomDescriptionId("SRAcoronal_tap");
+        //嗨嗨嗨，冷冻仓来咯
+        SectorEntityToken SRAderelict_cryosleeper = system.addCustomEntity("derelict_cryosleeper", txt("SRA_AT_Wisdom_Pivot_Order_System_A_derelict_cryosleeper"), "derelict_cryosleeper", "neutral");
+        SRAderelict_cryosleeper.setCircularOrbitPointingDown(star, 0, 4800, 60);
+        SRAderelict_cryosleeper.setCustomDescriptionId("SRAderelict_cryosleeper");
 
         //生成自家特殊舰队
         this.addFleet(planet1);
+
 
         //生成星门
         SectorEntityToken gate = system.addCustomEntity("SRA_gate", // unique id 设置星门id
                 txt("SRA_AT_Wisdom_Pivot_Order_System_A_gate"), // name - if null, defaultName from custom_entities.json will be used 设置你星门的名字
                 "inactive_gate", // type of object, defined in custom_entities.json 设置标签（让系统识别这是个星门）根据custom_entities.json设置
                 "SRA_AT_Wisdom_Pivot_Order"); // faction
-        gate.setCircularOrbit(system.getEntityById("AllTerritory"), 0, 3180, 350);
+        gate.setCircularOrbit(system.getEntityById("AllTerritory"), 240, 2560, 360);
 
         //设置你星系的永久稳定点建筑
         SectorEntityToken A = system.addCustomEntity("SRA_A", txt("SRA_AT_Wisdom_Pivot_Order_System_A_5"), "comm_relay", "SRA_AT_Wisdom_Pivot_Order");
