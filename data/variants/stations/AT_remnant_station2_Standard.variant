@@ -1,0 +1,43 @@
+{
+    "displayName": "AT remnant",
+    "fluxCapacitors": 0,
+    "fluxVents": 0,
+    "hullId": "AT_remnant_station2",
+    "hullMods": [],
+    "variantId": "AT_remnant_station2_Standard",
+    "weaponGroups": [],
+    "modules": [
+        # top plus armor
+        {"WS 024": "remnant_armour3_Standard"},
+        {"WS 001": "AT_remnant_weapon_platform1"},
+        
+        # bottom right plus armor
+        {"WS 030": "remnant_armour3_Standard"},
+        {"WS 007": "AT_remnant_weapon_platform1"},
+        
+        # bottom left plus armor
+        {"WS 027": "remnant_armour3_Standard"},
+        {"WS 016": "AT_remnant_weapon_platform1"},
+        
+        # bottom PD/shield
+        {"WS 032": "AT_remnant_shield2"},
+        
+        # left PD/shield
+        {"WS 033": "AT_remnant_shield2"},
+        
+        # right PD/shield
+        {"WS 034": "AT_remnant_shield2"},
+        
+        # left side weapon platforms
+        {"WS 035": "AT_remnant_weapon_platform2"},
+        {"WS 036": "AT_remnant_weapon_platform2"},
+        
+        # right side weapon platforms
+        {"WS 037": "AT_remnant_weapon_platform2"},
+        {"WS 038": "AT_remnant_weapon_platform2"},
+        
+        # hangars
+        {"WS 039": "AT_remnant_hangar1"},
+        {"WS 040": "AT_remnant_hangar1"}
+    ]
+}

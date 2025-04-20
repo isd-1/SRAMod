@@ -1,0 +1,34 @@
+{
+    "displayName": "AT remnant",
+    "fluxCapacitors": 10,
+    "fluxVents": 10,
+    "hullId": "remnant_shield2",
+    "hullMods": [],
+    "sMods": [
+        "SRA_core",
+        "hardenedshieldemitter",
+        "magazines",
+        "pointdefenseai",
+        "stabilizedshieldemitter",
+        "extendedshieldemitter",
+        "armoredweapons",
+        "turretgyros",
+        "eccm",
+        "heavyarmor",
+        "stealth_minefield_lt",
+        "autorepair"
+    ],
+    "variantId": "AT_remnant_shield2",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS 002": "realitydisruptor"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS 001": "SRA_devastator"}
+        }
+    ]
+}

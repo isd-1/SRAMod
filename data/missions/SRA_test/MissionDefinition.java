@@ -18,6 +18,7 @@ import java.util.List;
 public class MissionDefinition implements MissionDefinitionPlugin {
 
 	public static final String prefix = "SRA_";
+	public static final String prefix2 = "AT_";
 
 	@Override
 	public void defineMission(MissionDefinitionAPI api) {
@@ -33,6 +34,9 @@ public class MissionDefinition implements MissionDefinitionPlugin {
 		for (String id : Global.getSettings().getAllVariantIds()) {
 			ShipVariantAPI variant = Global.getSettings().getVariant(id);
 			if (variant.getHullSpec().getHullId().startsWith(prefix) && variant.getHullSpec().getHullSize() != ShipAPI.HullSize.FIGHTER && !id.startsWith("mission_")) {
+				variants.add(id);
+			}
+			if (variant.getHullSpec().getHullId().startsWith(prefix2) && variant.getHullSpec().getHullSize() != ShipAPI.HullSize.FIGHTER && !id.startsWith("mission_")) {
 				variants.add(id);
 			}
 		}

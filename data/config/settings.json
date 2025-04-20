@@ -16,8 +16,13 @@
 
 		},
 
+		"characters":{
+		    "SRA_StellarRegulator":"graphics/portraits/SRA_StellarRegulator.png",
+        	"SRA_Rocivia":"graphics/portraits/SRA_Rocivia.png"
+    	},
+    
 		"fx":{
-        "SRA_weapon_planet_killer_trails": "graphics/fx/SRA_weapon_planet_killer.png"
+        	"SRA_weapon_planet_killer_trails": "graphics/fx/SRA_weapon_planet_killer.png"
 		},
 
 		"intel": {

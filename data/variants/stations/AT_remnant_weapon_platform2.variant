@@ -1,0 +1,45 @@
+{
+    "displayName": "AT remnant",
+    "fluxCapacitors": 10,
+    "fluxVents": 10,
+    "hullId": "remnant_weapon_platform2",
+    "hullMods": [],
+    "sMods": [
+        "SRA_core",
+        "magazines",
+        "pointdefenseai",
+        "armoredweapons",
+        "turretgyros",
+        "eccm",
+        "heavyarmor",
+        "stealth_minefield_lt",
+        "autorepair"
+    ],
+    "permaMods": [],
+    "variantId": "AT_remnant_weapon_platform2",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS 002": "SRA_gauss"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS 003": "SRA_riftbeam"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS 004": "SRA_ionpulser"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 006": "shockrepeater",
+                "WS 007": "shockrepeater"
+            }
+        }
+    ]
+}

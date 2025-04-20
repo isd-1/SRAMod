@@ -1,0 +1,275 @@
+{
+	id:"SRA_AT_Wisdom_Pivot_Order", # 势力的id
+	
+
+	"color":[0,71,158,255], # 势力的颜色
+	"displayName":"全域智枢修会", # 势力的名称
+	"displayNameWithArticle":"全域智枢修会", # 势力的名称，在中文环境下，应当与 displayName 一致
+	"logo":"graphics/factions/SRA_flags_All_Territory.png", # 势力的旗帜贴图路径，贴图大小应该是 410*256
+	"crest":"graphics/factions/crest_SRA_flags_All_Territory.png", # 势力的短旗帜贴图路径，贴图大小应该是 256*256
+	"shipNamePrefix":"AT", # 势力的舰船前缀，大写英文字母，可随意编写
+	"shipNameSources":{ # 势力的舰船名词典，详见 starsector-core/data/strings/ship_names
+		"MERCANTILE":1,
+		"SPACE":1,
+		"DERELICT_DRONE":1,
+	},
+	"names":{ # 势力的人名词典，详见 starsector-core/data/characters
+		"ai":1,
+	},
+	
+	# variantOverrides restricts hulls to listed variants and adjusts their probability
+	"variantOverrides":{
+	},
+	
+	# multiplier for how often hulls show up in the faction's fleets
+	"hullFrequency":{ # 势力的舰船出现概率调整
+		"tags":{
+		},
+		"hulls":{
+		},
+	},
+	# ships the faction gets access to when importing S&W out-of-faction
+	"shipsWhenImporting":{ # 势力的持入舰船
+		"tags":["remnant", "SRA_bp", "hightech_bp"], # 请尤其注意这个 tags 的内容
+		"hulls":[
+		],
+	},
+	"knownShips":{ # 势力的舰船列表
+		"tags":["remnant", "SRA_bp", "hightech_bp"], # 请尤其注意这个 tags 的内容
+		"hulls":[
+		],
+	},
+	# listing ships here will make the faction mostly use them even if other hulls become available
+	"priorityShips":{ # 优先选用的舰船，会显著覆盖本势力其它舰船的出现率，如无特殊要求则留空
+		"tags":[],
+		"hulls":[
+		],
+	},
+	"knownFighters":{ # 势力的战机列表
+		"tags":["remnant", "SRA_bp", "hightech_bp"], # 请尤其注意这个 tags 的内容
+		"fighters":[
+		],
+	},
+	"priorityFighters":{ # 优先选用的战机，会显著覆盖本势力其它战机的出现率，如无特殊要求则留空
+		"tags":[],
+		"fighters":[
+		],
+	},
+	"knownWeapons":{ # 势力的武器列表
+		"tags":["base_bp", "lowtech_bp", "midline_bp", "hightech_bp", "missile_bp", "missile_bp", "SRA_bp"], # 请尤其注意这个 tags 的内容
+		"weapons":[
+			"lightneedler",
+			"railgun",
+			"dualflak",
+			"heavymauler",
+			"hveldriver",
+			"heavyneedler",
+			"gauss",
+			"mjolnir",
+			"multineedler",
+			"breachpod",
+			"sabotpod",
+			"phasecl",
+			"cyclone",
+			"hurricane",
+			"squall",
+			"locust",
+			"pdburst",
+			"amblaster",
+			"phasebeam",
+			"heavyblaster",
+			"heavyburst",
+			"ionpulser",
+			"ionbeam",
+			"plasma",
+			"guardian",
+			"tachyonlance",
+		],
+	},
+	"priorityWeapons":{ # 优先选用的武器，会显著覆盖本势力其它武器的出现率，如无特殊要求则留空
+		"tags":[],
+		"weapons":[
+		],
+	},
+	"knownHullMods":{ # 势力的舰船插件列表
+		"tags":["base_bp", "remnant"], # 请尤其注意这个 tags 的内容
+		"hullMods":[
+			"advancedshieldemitter", # accelerated
+			"advancedoptics",
+			"turretgyros",
+			"armoredweapons",
+			"augmentedengines",
+			"autorepair",
+			"converted_hangar",
+			"eccm",
+			"ecm",
+			"expanded_deck_crew",
+			"magazines",
+			"missleracks",
+			"extendedshieldemitter",
+			"frontemitter",
+			"frontshield",  # makeshift
+			"hardenedshieldemitter",
+			"heavyarmor",
+			"insulatedengine",
+			"pointdefenseai",
+			"targetingunit",
+			"nav_relay",
+			"adaptiveshields", # omni
+			"operations_center",
+			"recovery_shuttles",
+			"fluxbreakers",
+			"solar_shielding",
+			"stabilizedshieldemitter",
+			"surveying_equipment",
+		],
+	},
+	"factionDoctrine":{ # 势力的舰队学说设置，与游戏内玩家自创势力相同
+        # 下列三条的总合建议为 7，不应该低于 1
+		"warships":5, # 通常战舰占比
+		"carriers":1, # 航母占比
+		"phaseShips":1, # 相位舰占比
+		
+        # 下列三条的总合建议为 7，不应该低于 1
+		"officerQuality":5, # 军官质量(影响等级、精英技能数)加成
+		"shipQuality":3, # 舰船质量(影响D插比率)加成
+		"numShips":1, # 舰船数量加成
+		
+		"shipSize":4, # 舰船大小倾向，越大越倾向于使用战列舰，最大为 5，不应该低于 1
+		
+		"aggression":4, # 军官性格倾向，越大越倾向于全鲁莽，最大为 5，不应该低于 1
+		
+		"combatFreighterProbability":0.1, # 用武装货舰替代正常货舰的概率
+		"combatFreighterCombatUseFraction":0, # 当舰队损失至低于此比率时，才将武装货舰当正规战舰上场
+		"combatFreighterCombatUseFractionWhenPriority":0, # 用武装货舰当正规战舰上场的概率(哪怕自己不缺的正规战舰)
+		"autofitRandomizeProbability":0.1, # 自动装配时的武器、插件打乱程度
+		
+		"commanderSkillsShuffleProbability":1,
+		"commanderSkills":[ # 本势力允许的指挥官舰队技能
+			"crew_training",
+			"officer_training",
+			"coordinated_maneuvers",
+			"support_doctrine",
+			"electronic_warfare",
+			"flux_regulation",
+			"coordinated_maneuvers",
+		],
+	},
+	"illegalCommodities":[ # 违禁品，在data/campaign/commodity.csv
+		 # 非常不建议干出例如把重型武器或者补给作为违禁品的事情
+	],
+	"music":{ # 音乐
+		"theme":"music_tritach_encounter_neutral",
+		"market_neutral":"music_tritach_market_neutral",
+		"market_hostile":"music_tritach_market_hostile",
+		"market_friendly":"music_tritach_market_friendly",
+		"encounter_neutral":"music_tritach_encounter_neutral",
+		"encounter_hostile":"music_tritach_encounter_hostile",
+		"encounter_friendly":"music_tritach_encounter_friendly",
+	},	
+	#"internalComms":"hegemony_internal",
+	#"tariffFraction":0.4, # 去掉最前方的 # 启用，税率，非常建议无视
+	#"tollFraction":0.1, # 去掉最前方的 # 启用，扫描玩家货舱后损毁CR的运算参数之一，非常建议无视
+	#"fineFraction":0.25, # 去掉最前方的 # 启用，扫描玩家货舱后损毁CR的运算参数之一，非常建议无视
+	"portraits":{
+		"standard_male":[ # 头像，男性
+			"graphics/portraits/portrait_ai1b.png",
+			"graphics/portraits/portrait_ai2b.png",
+			"graphics/portraits/portrait_ai3b.png",
+		],
+		"standard_female":[ # 头像，女性
+			"graphics/portraits/portrait_ai1b.png",
+			"graphics/portraits/portrait_ai2b.png",
+			"graphics/portraits/portrait_ai3b.png",
+		],
+	},
+	"ranks":{
+		"ranks":{ # 各类 rank 的自定义名称，若不需要可以整行删去，删去则为使用原版的默认名
+			"factionLeader":{"name":"先知"},
+			
+			"spaceSailor":{"name":"侍从"},
+			"spaceChief":{"name":"见习修士"},
+			"spaceEnsign":{"name":"修士"},
+			"spaceLieutenant":{"name":"高阶修士"},
+			"spaceCommander":{"name":"见习骑士"},
+			"spaceCaptain":{"name":"骑士"},
+			"spaceAdmiral":{"name":"高阶骑士"},
+			"spaceMarshal":{"name":"骑士长"},
+		},
+		"posts":{
+			"factionLeader":{"name":"先知"},
+			"patrolCommander":{"name":"巡卫"},
+			"fleetCommander":{"name":"领舰"},
+			"baseCommander":{"name":"修士"},
+		},
+	},
+	"voices":{ # 势力产生的联络人的类型分配比率，根据低、中、高重要性可以各自不同设计
+		"LOW":{ # 低重要性
+			"soldier":10, # 类型:权重
+			"business":5,		
+			"spacer":5,
+		},
+		"MEDIUM":{ # 中重要性
+			"soldier":10,
+			"official":5,
+		},
+		"HIGH":{ # 高重要性
+			"soldier":5,
+			"official":10,
+			"scientist":3,
+		},
+		# 所有可用的 voice(类型) 有
+		# spacer 寻常船员
+		# faithful 卢德信徒
+		# pather 左径狂信徒
+		# business 星际商人
+		# official 政务官员
+		# soldier 下级士兵
+		# scientist 科学家
+		# villain 海盗军阀
+		# aristo 旧式贵族
+	},
+	"custom":{
+		"offersCommissions":true, # 是否发布雇佣协议
+		"engagesInHostilities":ture, # 是否敌对时主动攻击
+		"buysAICores":true, # 是否收购ai核心
+		"AICoreValueMult":1, # 收购ai核心的价格倍率，1就是默认，2就是翻倍，允许小数
+		"AICoreRepMult":4, # 收购ai核心的关系倍率，1就是默认，2就是翻倍，允许小数
+		"buysSurveyData":true, # 是否会发布调查数据任务
+		"hostilityImpactOnGrowth":true, # 无效果，无视之
+		"caresAboutAtrocities":false, # 是否对饱和轰炸进行谴责
+        
+        "engageWhenEvenStrength":true, # 是否在敌人比较强时也主动触发舰队战斗
+		"decentralized":true, # 去中心化，让该势力相关的某些赏金任务更不容易发现玩家的身份，且影响某些内核代码判定。诸如自由联盟、海盗的势力应当设为 true
+		"gaVIPMission":false, # 有 Galatia 学院的 VIP 任务，极度极度不建议设为 true
+		"postsNoBounties":false, # 如果设为 true，则不主动发布势力赏金
+		"offerMissionsWhenHostile":true, # 是否在和玩家敌对时也对玩家发布任务
+		"allowsTransponderOffTrade":true, # 是否允许关闭应答器交易
+		"patrolsHaveNoPatrolMemoryKey":false, # 如果设为 true，则该势力的巡逻队在代码机制上不被认为是巡逻队
+		"pirateBehavior":false, # 是否是海盗型势力
+		"makesPirateBases":false, # 是否会虚空创造基地，如同海盗那样
+		"fightToTheLast":true, # 是否在战斗中大多数船都会死战不退
+        
+		"punitiveExpeditionData":{
+			"vsCompetitors":false, # 是否对商业竞争发动远征
+			"vsFreePort":false, # 是否对自由港发动远征
+			"canBombard":false, # 能否在发动远征时顺带进行轰炸
+			"territorial":false, # 是否对星系内的其它势力获得额外远征机会
+		},
+	},	
+	"fleetTypeNames":{
+
+        "tradeLiner":"运输",
+        "smallTrader":"补给",
+
+		"patrolSmall":"哨兵",
+		"patrolMedium":"卫队",
+		"patrolLarge":"骑士",
+
+        "taskForce":"征讨",
+
+        "foodReliefFleet":"救援",
+
+		"battlestation":"枢纽",
+	},
+},

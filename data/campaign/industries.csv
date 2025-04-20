@@ -1,0 +1,9 @@
+id,name,cost mult,build time,income,upkeep,downgrade,upgrade,tags,data,image,plugin,desc,order,Column 15
+SRA_city,流光星界,640,60,64,,,,"grounddefenses, military, unraidable, tactical_bombardment, structure",,graphics/icons/industry/pc_SRA_city_sky.png,data.scripts.campaign.SRA_city,"由星规阵列彻底重塑的星球，被精心打造的复杂结构层层覆盖，如齿轮般紧紧咬合。整个星球被理性与秩序所规划，紧密相连、处处相接，每一处建筑都是极效的表达，每一个角落都是设计的结晶。
+
+提供超乎想象的资源产出，并维系大量的额外防御舰队。",10,
+AT_Remnant_Station,全域星际要塞,640,120,,4,,,"station, sub_item, unraidable, structure, indevo_compat","{
+radius:70,
+variant:AT_remnant_station2_Standard,
+fleetName:AT Remnant Station
+}",graphics/icons/industry/battlestation.png,data.scripts.campaign.AT_Remnant_Station,全域智枢修会重新设计的余辉空间站，极大幅度提升了战斗力，并能维系一系列巡逻队。,,

@@ -1,0 +1,58 @@
+{
+    "playableFaction":true,
+    "corvusCompatible":true,
+    
+    "rebelFleetSuffix":"反叛者",
+    
+    "marketSpawnWeight":2,
+
+    "startRelationships":{ "tritachyon": 0.25, "persean":-0.6 },
+    
+    "alignments":{
+        "technocratic":1,
+        "militarist":0.5,
+        "diplomatic":1,
+        "ideological":-1.5,
+    },
+    "diplomacyTraits":["helps_allies", "lowprofile", "likes_ai", "law_and_order", "irredentist", "pacifist"],
+	
+    
+    # chance of the faction being picked to send a colony expedition. Default 0 (disabled)
+    "colonyExpeditionChance":1,	# baseline expansion behaviour
+    "colonyTargetValuator":"exerelin.campaign.colony.IndustrialColonyTargetValuator",
+    
+    "specialForcesNamerClass":"exerelin.campaign.intel.specialforces.namer.PlanetNamer",
+    
+	
+	
+	
+	
+    "startShipsSolo":[["atlas_Standard"]],
+    "startShipsCombatSmall":[["atlas_Standard"]],
+    "startShipsTradeSmall":[["atlas_Standard"]],
+	"startShipsSuper":[["SRA_SOGZ_main_attack"]],
+     
+	 
+	 
+	 
+	 
+    "defenceStations":[
+        {"ids":["AT_Remnant_Station"]},
+        {"ids":["AT_Remnant_Station"], "weight":0.5},
+    ],
+    
+    "industrySeeds":[
+        {"id":"orbitalworks", "mult":0.1},
+        {"id":"fuelprod", "mult":0.1},
+        {"id":"lightindustry", "mult":0.1},
+    ],
+    
+    "bonusSeeds":[
+        {"id":"population_upsize", "count":1},
+        {"id":"nanoforge_pristine", "count":1},
+		{"id":"aiCore_station", "count":2, "mult":0.35},
+        {"id":"aiCore_military", "mult":0.8},
+        {"id":"aiCore_heavyindustry", "count":2},
+        {"id":"aiCore_any", "mult":0.6}
+    ],
+}

@@ -3,7 +3,7 @@
 	"name":"星规阵列 [SRA_MOD]",
 	"version":{"major":0, "minor":0, "patch":1},
 	"gameVersion":"0.97a-RC10",
-	"author":"善良地砖",
+	"author":"地砖",
 	"description":"远神星规mod",
 	"dependencies": [
 		{
@@ -23,5 +23,5 @@
 		}
 	],
 	"jars":["jars/SRAMod.jar"],
-	#"modPlugin":"data.scripts.YourModPlugin"
+	"modPlugin":"data.scripts.SRA_ModPlugin"
 }

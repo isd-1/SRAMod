@@ -1,0 +1,37 @@
+{
+    "displayName": "AT remnant",
+    "fluxCapacitors": 10,
+    "fluxVents": 10,
+    "hullId": "remnant_weapon_platform1",
+    "hullMods": [],
+    "sMods": [
+        "SRA_core",
+        "magazines",
+        "pointdefenseai",
+        "armoredweapons",
+        "turretgyros",
+        "eccm",
+        "heavyarmor",
+        "stealth_minefield_lt",
+        "autorepair"
+    ],
+    "permaMods": [],
+    "variantId": "AT_remnant_weapon_platform1",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS 002": "SRA_gauss"}
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {"WS 004": "SRA_rifttorpedo"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS 001": "SRA_plasma"}
+        }
+    ]
+}

@@ -1,0 +1,50 @@
+{
+    "displayName": "AT remnant",
+    "fluxCapacitors": 10,
+    "fluxVents": 10,
+    "hullId": "remnant_hangar1",
+    "hullMods": [],
+    "sMods": [
+        "SRA_core",
+        "magazines",
+        "pointdefenseai",
+        "armoredweapons",
+        "turretgyros",
+        "eccm",
+        "heavyarmor",
+        "stealth_minefield_lt",
+        "autorepair"
+    ],
+    "variantId": "AT_remnant_hangar1",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 001": "SRA_minipulser",
+                "WS 002": "SRA_minipulser"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS 003": "SRA_amsrm",
+                "WS 006": "SRA_amsrm"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 004": "SRA_riftbeam",
+                "WS 005": "SRA_riftbeam"
+            }
+        }
+    ],
+    "wings": [
+        "aspect_attack_wing",
+        "aspect_attack_wing",
+        "aspect_attack_wing"
+    ]
+}
