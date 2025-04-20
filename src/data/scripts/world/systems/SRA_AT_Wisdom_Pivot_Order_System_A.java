@@ -228,7 +228,7 @@ public class SRA_AT_Wisdom_Pivot_Order_System_A {
                 txt("SRA_AT_Wisdom_Pivot_Order_System_A_gate"), // name - if null, defaultName from custom_entities.json will be used 设置你星门的名字
                 "inactive_gate", // type of object, defined in custom_entities.json 设置标签（让系统识别这是个星门）根据custom_entities.json设置
                 "SRA_AT_Wisdom_Pivot_Order"); // faction
-        gate.setCircularOrbit(system.getEntityById("AllTerritory"), 240, 2800, 360);
+        gate.setCircularOrbit(system.getEntityById("AllTerritory"), 240, 3600, 360);
 
         //设置你星系的永久稳定点建筑
         SectorEntityToken A = system.addCustomEntity("SRA_A", txt("SRA_AT_Wisdom_Pivot_Order_System_A_5"), "comm_relay", "SRA_AT_Wisdom_Pivot_Order");
