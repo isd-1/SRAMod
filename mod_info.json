@@ -20,6 +20,11 @@
 			"id": "MagicLib",
 			"name": "MagicLib",
 			#"version": "xxx"
+		},
+		{
+			"id": "nexerelin",
+			"name": "nexerelin",
+			#"version": "xxx"
 		}
 	],
 	"jars":["jars/SRAMod.jar"],

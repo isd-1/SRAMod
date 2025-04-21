@@ -144,9 +144,9 @@ public class AT_Remnant_Station extends OrbitalStation implements RouteManager.R
                int light = this.getCount(PatrolType.FAST);
                int medium = this.getCount(PatrolType.COMBAT);
                int heavy = this.getCount(PatrolType.HEAVY);
-               int maxLight = 4;
-               int maxMedium = 4;
-               int maxHeavy = 2;
+               int maxLight = 2;
+               int maxMedium = 2;
+               int maxHeavy = 1;
                WeightedRandomPicker<FleetFactory.PatrolType> picker = new WeightedRandomPicker();
                picker.add(PatrolType.HEAVY, (float)(maxHeavy - heavy));
                picker.add(PatrolType.COMBAT, (float)(maxMedium - medium));

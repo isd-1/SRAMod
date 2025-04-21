@@ -14,11 +14,11 @@
         "diplomatic":1,
         "ideological":-1.5,
     },
-    "diplomacyTraits":["helps_allies", "lowprofile", "likes_ai", "law_and_order", "irredentist", "pacifist"],
+    "diplomacyTraits":["helps_allies", "lowprofile", "likes_ai", "law_and_order", "irredentist", "pacifist", "devious"],
 	
     
     # chance of the faction being picked to send a colony expedition. Default 0 (disabled)
-    "colonyExpeditionChance":1,	# baseline expansion behaviour
+    "colonyExpeditionChance":0,	# baseline expansion behaviour
     "colonyTargetValuator":"exerelin.campaign.colony.IndustrialColonyTargetValuator",
     
     "specialForcesNamerClass":"exerelin.campaign.intel.specialforces.namer.PlanetNamer",

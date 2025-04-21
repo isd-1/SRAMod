@@ -7,6 +7,7 @@ import com.fs.starfarer.api.campaign.econ.MarketAPI;
 import com.fs.starfarer.api.campaign.econ.MarketConditionAPI;
 import com.fs.starfarer.api.characters.PersonAPI;
 import com.fs.starfarer.api.fleet.FleetMemberAPI;
+import com.fs.starfarer.api.impl.campaign.AICoreAdminPluginImpl;
 import com.fs.starfarer.api.impl.campaign.fleets.FleetFactoryV3;
 import com.fs.starfarer.api.impl.campaign.ids.*;
 import com.fs.starfarer.api.impl.campaign.procgen.StarSystemGenerator;
@@ -92,8 +93,8 @@ public class SRA_AT_Wisdom_Pivot_Order_System_A {
         PlanetAPI planet2 = system.addPlanet("SRA_planet2", star, SRAI18nUtil.getStarSystemsString("SRA_planet2_name"), "cryovolcanic", 160, 90f, 4000f, 360f);
         
         //a new market for planet 设置星球市场
-        MarketAPI planet2Market = addMarketplace(planet2, planet2.getName(), 8, // this number is size 设置殖民地规模
-                new ArrayList<>(Arrays.asList(Conditions.POPULATION_8, // population, should be equal to size
+        MarketAPI planet2Market = addMarketplace(planet2, planet2.getName(), 6, // this number is size 设置殖民地规模
+                new ArrayList<>(Arrays.asList(Conditions.POPULATION_6, // population, should be equal to size
                         Conditions.NO_ATMOSPHERE,
                         Conditions.RUINS_WIDESPREAD,
                         Conditions.ORE_ULTRARICH,
@@ -126,8 +127,8 @@ public class SRA_AT_Wisdom_Pivot_Order_System_A {
         planet3.setCircularOrbitWithSpin(planet2, 0, 150, 160, 2, 4);
         planet3.setCircularOrbitPointingDown(planet2, 60, 250, 120);
         //a new market for planet 设置星球市场
-        MarketAPI planet3Market = addMarketplace(planet3, planet3.getName(), 8, // this number is size 设置殖民地规模
-                new ArrayList<>(Collections.singletonList(Conditions.POPULATION_8// population, should be equal to size
+        MarketAPI planet3Market = addMarketplace(planet3, planet3.getName(), 6, // this number is size 设置殖民地规模
+                new ArrayList<>(Collections.singletonList(Conditions.POPULATION_6// population, should be equal to size
                 )),
                 new ArrayList<>(Arrays.asList(Submarkets.GENERIC_MILITARY,
                         Submarkets.SUBMARKET_BLACK,
@@ -152,16 +153,33 @@ public class SRA_AT_Wisdom_Pivot_Order_System_A {
 
 
 
-        PlanetAPI planet4 = system.addPlanet("SRA_planet5", star, SRAI18nUtil.getStarSystemsString("SRA_planet4_name"), "gas_giant", 640, 320f, 3200f, 360f);
-        planet4.getMarket().addCondition(Conditions.VERY_HOT);
-        planet4.getMarket().addCondition(Conditions.VOLATILES_PLENTIFUL);
+        PlanetAPI planet4 = system.addPlanet("SRA_planet4", star, SRAI18nUtil.getStarSystemsString("SRA_planet4_name"), "gas_giant", 640, 320f, 3200f, 360f);
+        //a new market for planet 设置星球市场
+        MarketAPI planet4Market = addMarketplace(planet4, planet4.getName(), 6, // this number is size 设置殖民地规模
+                new ArrayList<>(Arrays.asList(Conditions.POPULATION_6,// population, should be equal to size
+                    Conditions.VERY_HOT,
+                    Conditions.VOLATILES_PLENTIFUL
+                )),
+                new ArrayList<>(Arrays.asList(Submarkets.GENERIC_MILITARY,
+                        Submarkets.SUBMARKET_BLACK,
+                        Submarkets.SUBMARKET_OPEN,
+                        Submarkets.SUBMARKET_STORAGE)),
+                new ArrayList<>(Arrays.asList(Industries.POPULATION,
+                        Industries.MEGAPORT,
+                        Industries.ORBITALWORKS,
+                        "AT_Remnant_Station",
+                        Industries.HEAVYBATTERIES
+                        )));
         planet4.setCustomDescriptionId("SRA_planet4_description");
+        planet4Market.getIndustry(Industries.ORBITALWORKS).setAICoreId(Commodities.ALPHA_CORE);
+        planet4Market.getIndustry(Industries.ORBITALWORKS).setSpecialItem(new SpecialItemData(Items.PRISTINE_NANOFORGE, null));
+        planet4Market.getIndustry("AT_Remnant_Station").setAICoreId(Commodities.ALPHA_CORE);
 
         //a new planet for people 一个新的星球（给势力
         PlanetAPI planet5 = system.addPlanet("SRA_planet5", planet4, SRAI18nUtil.getStarSystemsString("SRA_planet5_name"), "water", 160, 80f, 800f, 60f);
         //a new market for planet 设置星球市场
-        MarketAPI planet5Market = addMarketplace(planet5, planet5.getName(), 8, // this number is size 设置殖民地规模
-                new ArrayList<>(Arrays.asList(Conditions.POPULATION_8,// population, should be equal to size
+        MarketAPI planet5Market = addMarketplace(planet5, planet5.getName(), 6, // this number is size 设置殖民地规模
+                new ArrayList<>(Arrays.asList(Conditions.POPULATION_6,// population, should be equal to size
                     Conditions.WATER_SURFACE,
                     Conditions.ORE_ULTRARICH,
                     Conditions.RARE_ORE_ULTRARICH,

@@ -2,7 +2,7 @@
 	id:"SRA_AT_Wisdom_Pivot_Order", # 势力的id
 	
 
-	"color":[0,71,158,255], # 势力的颜色
+	"color":[0,200,255,255], # 势力的颜色
 	"displayName":"全域智枢修会", # 势力的名称
 	"displayNameWithArticle":"全域智枢修会", # 势力的名称，在中文环境下，应当与 displayName 一致
 	"logo":"graphics/factions/SRA_flags_All_Territory.png", # 势力的旗帜贴图路径，贴图大小应该是 410*256
@@ -185,7 +185,7 @@
 	},
 	"ranks":{
 		"ranks":{ # 各类 rank 的自定义名称，若不需要可以整行删去，删去则为使用原版的默认名
-			"factionLeader":{"name":"先知"},
+			"factionLeader":{"name":"掌灯者"},
 			
 			"spaceSailor":{"name":"侍从"},
 			"spaceChief":{"name":"见习修士"},
@@ -197,7 +197,7 @@
 			"spaceMarshal":{"name":"骑士长"},
 		},
 		"posts":{
-			"factionLeader":{"name":"先知"},
+			"factionLeader":{"name":"掌灯者"},
 			"patrolCommander":{"name":"巡卫"},
 			"fleetCommander":{"name":"领舰"},
 			"baseCommander":{"name":"修士"},

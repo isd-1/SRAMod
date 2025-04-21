@@ -123,7 +123,7 @@ public class SRA_ModPlugin extends BaseModPlugin {
             market.addPerson(officer);//将该person加入市场的人物列表，使某些按市场寻人的方法可以找到
 
             //这里是设置该人物拥有多少个额外任务上限，若不填，则每次只能刷出一个任务，若填1，则每次最多能刷出2个人物，填2则最多刷出3个。
-            officer.getMemoryWithoutUpdate().set(BaseMissionHub.NUM_BONUS_MISSIONS, 1);
+            officer.getMemoryWithoutUpdate().set(BaseMissionHub.NUM_BONUS_MISSIONS, 0);
             //为人物添加MissionHub
             BaseMissionHub.set(officer, new BaseMissionHub(officer));
         }

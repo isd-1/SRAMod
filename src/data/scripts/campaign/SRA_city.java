@@ -50,23 +50,23 @@ public class SRA_city extends BaseIndustry implements RouteFleetSpawner, FleetEv
     }
     public void apply() {
         super.apply(true);
-        supply(Commodities.SUPPLIES, 16);
-        supply(Commodities.FUEL, 16);
-        supply(Commodities.CREW, 16);
-        supply(Commodities.MARINES, 16);
+        supply(Commodities.SUPPLIES, 8);
+        supply(Commodities.FUEL, 8);
+        supply(Commodities.CREW, 8);
+        supply(Commodities.MARINES, 8);
 
         supply(Commodities.FOOD, 8);
         supply(Commodities.ORGANICS, 8);
-        supply(Commodities.VOLATILES, 16);
+        supply(Commodities.VOLATILES, 8);
         supply(Commodities.ORE, 8);
         supply(Commodities.RARE_ORE, 8);
-        supply(Commodities.METALS, 16);
-        supply(Commodities.RARE_METALS, 16);
-        supply(Commodities.HEAVY_MACHINERY, 16);
+        supply(Commodities.METALS, 8);
+        supply(Commodities.RARE_METALS, 8);
+        supply(Commodities.HEAVY_MACHINERY, 8);
         supply(Commodities.DOMESTIC_GOODS, 8);
 
-        supply(Commodities.HAND_WEAPONS, 16);
-        supply(Commodities.SHIPS, 16);
+        supply(Commodities.HAND_WEAPONS, 8);
+        supply(Commodities.SHIPS, 8);
 
         Pair<String, Integer> deficit = getMaxDeficit(Commodities.HAND_WEAPONS);
         applyDeficitToProduction(1, deficit, Commodities.MARINES);
@@ -180,8 +180,8 @@ public class SRA_city extends BaseIndustry implements RouteFleetSpawner, FleetEv
             int medium = getCount(PatrolType.COMBAT);
             int heavy = getCount(PatrolType.HEAVY);
 
-            int maxLight = 8;
-            int maxMedium = 4;
+            int maxLight = 2;
+            int maxMedium = 2;
             int maxHeavy = 2;
 
             WeightedRandomPicker<PatrolType> picker = new WeightedRandomPicker<>();
