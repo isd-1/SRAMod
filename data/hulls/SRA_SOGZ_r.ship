@@ -6,10 +6,10 @@
   "style": "OMEGA",
   "height": 472,
   "width": 147,
-  "center": [74.5, 236.5],
-  "collisionRadius": 247.5,
+  "center": [74, 236],
+  "collisionRadius": 247,
   "shieldCenter": [0, 0],
-  "shieldRadius": 244.5,
+  "shieldRadius": 244,
   "viewOffset": 0,
   "builtInMods": [
     "SRA_core",
@@ -26,7 +26,7 @@
       "mount": "HIDDEN",
       "arc": 360,
       "angle": -0,
-      "locations": [-49.5, -28]
+      "locations": [-49, -28]
     },
     {
       "id": "WS0002",
@@ -35,7 +35,7 @@
       "mount": "HIDDEN",
       "arc": 270,
       "angle": -30,
-      "locations": [18, 26.5]
+      "locations": [18, 26]
     },
     {
       "id": "WS0003",
@@ -44,7 +44,7 @@
       "mount": "HIDDEN",
       "arc": 360,
       "angle": 0,
-      "locations": [-96.5, 30.5]
+      "locations": [-96, 30]
     },
     {
       "id": "WS0004",
@@ -53,23 +53,23 @@
       "mount": "HIDDEN",
       "arc": 360,
       "angle": 0,
-      "locations": [113.5, 41.5]
+      "locations": [113, 41]
     }
   ],
   "engineSlots": [],
   "bounds": [
-    -221, 20.5,
-    -105, 10.5,
-    -26.5, 14.5,
-    -60.5, -53.5,
-    5.5, 14,
-    36.5, 9,
-    119, 27.5,
-    172, 47.5,
-    169.5, 55.5,
-    89.5, 64.5,
+    -221, 20,
+    -105, 10,
+    -26, 14,
+    -60, -53,
+    5, 14,
+    36, 9,
+    119, 27,
+    172, 47,
+    169, 55,
+    89, 64,
     -25, 69,
-    -98.5, 65,
+    -98, 65,
     -221, 37
   ]
 }

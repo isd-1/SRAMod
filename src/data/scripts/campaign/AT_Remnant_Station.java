@@ -210,15 +210,15 @@ public class AT_Remnant_Station extends OrbitalStation implements RouteManager.R
    public static int getPatrolCombatFP(FleetFactory.PatrolType type, Random random) {
       float combat = 0.0F;
       switch (type) {
-          case FAST:
-               combat = (float)Math.round(3.0F + random.nextFloat() * 2.0F) * 5.0F;
-              break;
-          case COMBAT:
-               combat = (float)Math.round(6.0F + random.nextFloat() * 3.0F) * 5.0F;
-              break;
-          case HEAVY:
-               combat = (float)Math.round(10.0F + random.nextFloat() * 5.0F) * 5.0F;
-              break;
+         case FAST:
+            combat = 32f;
+            break;
+         case COMBAT:
+            combat = 64f;
+            break;
+         case HEAVY:
+            combat = 128f;
+            break;
       }
       return Math.round(combat);
    }

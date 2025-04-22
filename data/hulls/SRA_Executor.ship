@@ -1,0 +1,188 @@
+{
+  "hullName": "SRA_Executor",
+  "hullId": "SRA_Executor",
+  "hullSize": "CAPITAL_SHIP",
+  "spriteName": "graphics/ships/SRA_Executor.png",
+  "style": "OMEGA",
+  "height": 512,
+  "width": 256,
+  "center": [128, 256],
+  "collisionRadius": 258,
+  "shieldCenter": [0, 0],
+  "shieldRadius": 256,
+  "viewOffset": 0,
+  "builtInMods": [
+    "SRA_core",
+    "advancedcore"
+  ],
+  "builtInWeapons": {
+    "WS0001": "SRA_T_weapon_supreme_lily",
+  },
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "LARGE",
+      "type": "BUILT_IN",
+      "mount": "HIDDEN",
+      "arc": 15,
+      "angle": 0,
+      "locations": [185, -0]
+    },
+    {
+      "id": "WS0002",
+      "size": "LARGE",
+      "type": "HYBRID",
+      "mount": "HIDDEN",
+      "arc": 240,
+      "angle": 0,
+      "locations": [80, -0]
+    },
+    {
+      "id": "WS0003",
+      "size": "LARGE",
+      "type": "BALLISTIC",
+      "mount": "HIDDEN",
+      "arc": 240,
+      "angle": 0,
+      "locations": [-3, -0]
+    },
+    {
+      "id": "WS0004",
+      "size": "MEDIUM",
+      "type": "HYBRID",
+      "mount": "HIDDEN",
+      "arc": 360,
+      "angle": 60,
+      "locations": [-72, 31]
+    },
+    {
+      "id": "WS0005",
+      "size": "MEDIUM",
+      "type": "HYBRID",
+      "mount": "HIDDEN",
+      "arc": 360,
+      "angle": -60,
+      "locations": [-72, -31]
+    },
+    {
+      "id": "WS0008",
+      "size": "SMALL",
+      "type": "COMPOSITE",
+      "mount": "HIDDEN",
+      "arc": 120,
+      "angle": 60,
+      "locations": [-15, 27]
+    },
+    {
+      "id": "WS0009",
+      "size": "SMALL",
+      "type": "COMPOSITE",
+      "mount": "HIDDEN",
+      "arc": 120,
+      "angle": -60,
+      "locations": [-15, -27]
+    },
+    {
+      "id": "WS0010",
+      "size": "SMALL",
+      "type": "HYBRID",
+      "mount": "HIDDEN",
+      "arc": 240,
+      "angle": 60,
+      "locations": [38, 22]
+    },
+    {
+      "id": "WS0011",
+      "size": "SMALL",
+      "type": "HYBRID",
+      "mount": "HIDDEN",
+      "arc": 240,
+      "angle": -60,
+      "locations": [38, -22]
+    },
+    {
+      "id": "WS0006",
+      "size": "MEDIUM",
+      "type": "COMPOSITE",
+      "mount": "HIDDEN",
+      "arc": 120,
+      "angle": -60,
+      "locations": [-185, -55]
+    },
+    {
+      "id": "WS0007",
+      "size": "MEDIUM",
+      "type": "COMPOSITE",
+      "mount": "HIDDEN",
+      "arc": 120,
+      "angle": 60,
+      "locations": [-185, 55]
+    },
+    {
+      "id": "WS0012",
+      "size": "SMALL",
+      "type": "HYBRID",
+      "mount": "HIDDEN",
+      "arc": 180,
+      "angle": 60,
+      "locations": [131, 13]
+    },
+    {
+      "id": "WS0013",
+      "size": "SMALL",
+      "type": "HYBRID",
+      "mount": "HIDDEN",
+      "arc": 180,
+      "angle": -60,
+      "locations": [131, -13]
+    },
+    {
+      "id": "LB 1",
+      "size": "LARGE",
+      "type": "LAUNCH_BAY",
+      "mount": "HIDDEN",
+      "arc": 360,
+      "angle": 0,
+      "locations": [
+        -42, 19,
+        -42, -14
+      ]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-90, -0],
+      "length": 30,
+      "width": 10,
+      "angle": 180,
+      "contrailSize": 30,
+      "style": "OMEGA"
+    }
+  ],
+  "bounds": [
+    -105, -17,
+    -95, -25,
+    -221, -70,
+    -71, -38,
+    -41, -18,
+    -17, -27,
+    15, -16,
+    38, -23,
+    109, -11,
+    119, -18,
+    187, -15,
+    228, -5,
+    228, 5,
+    187, 15,
+    119, 18,
+    109, 11,
+    38, 23,
+    15, 16,
+    -17, 27,
+    -41, 18,
+    -71, 38,
+    -221, 70,
+    -95, 25,
+    -105, 17
+  ]
+}

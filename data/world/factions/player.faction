@@ -1,0 +1,22 @@
+{
+	"flags":[
+		{
+			"logo":"graphics/factions/SRA_flags_All_Territory.png",
+			"crest":"graphics/factions/crest_SRA_flags_All_Territory.png"
+		},
+		{
+			"logo":"graphics/factions/SRA_flags_StellarRegulatorArray.png",
+			"crest":"graphics/factions/crest_SRA_flags_StellarRegulatorArray.png"
+		},
+	],
+    "portraits":{
+        "standard_male":[
+        ],
+
+        "standard_female":[
+			"graphics/portraits/SRA_StellarRegulator.png",
+			"graphics/portraits/SRA_Rocivia.png",
+			"graphics/portraits/SRA_Hidra.png",
+        ]
+    }
+}

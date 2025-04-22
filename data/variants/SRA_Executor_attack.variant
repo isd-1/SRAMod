@@ -1,0 +1,63 @@
+{
+    "displayName": "强袭",
+    "fluxCapacitors": 20,
+    "fluxVents": 14,
+    "hullId": "SRA_Executor",
+    "hullMods": [
+        "hardenedshieldemitter",
+        "stabilizedshieldemitter"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "SRA_Executor_attack",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0008": "SRA_amsrm",
+                "WS0009": "SRA_amsrm"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0006": "SRA_resonatormrm",
+                "WS0007": "SRA_resonatormrm"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS0001": "SRA_T_weapon_supreme_lily"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0002": "SRA_gauss",
+                "WS0003": "SRA_gauss"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0010": "SRA_minipulser",
+                "WS0011": "SRA_minipulser",
+                "WS0012": "SRA_minipulser",
+                "WS0013": "SRA_minipulser"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0004": "SRA_ionpulser",
+                "WS0005": "SRA_ionpulser"
+            }
+        }
+    ],
+    "wings": ["flash_wing"]
+}

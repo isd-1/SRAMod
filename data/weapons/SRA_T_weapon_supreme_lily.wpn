@@ -1,0 +1,41 @@
+{
+  "id": "SRA_T_weapon_supreme_lily",
+  "specClass": "projectile",
+  "projectileSpecId": "SRA_T_weapon_supreme_shot",
+	"everyFrameEffect":"data.weapons.SRA_T_weapon_supremeEffect",
+  "renderHints":[RENDER_BARREL_BELOW],
+	"type":"ENERGY",
+	"size":"LARGE",
+	"turretSprite":"graphics/weapons/SRA_T_weapon_supreme_base.png",
+	"turretGlowSprite":"",
+	"hardpointSprite":"",
+	"hardpointGlowSprite":"",
+  "turretOffsets": [
+    -1,
+    0
+  ],
+  "turretAngleOffsets": [
+    0
+  ],
+  "hardpointOffsets": [
+    -3,
+    0
+  ],
+  "hardpointAngleOffsets": [
+    0
+  ],
+	"barrelMode":"ALTERNATING", # or LINKED.  whether barrels fire at the same time or alternate.
+	"animationType":"GLOW_AND_FLASH",
+	"glowColor":[105,105,205,255],
+	"muzzleFlashSpec":{
+    	"length": 80,
+    	"spread": 20,
+    	"particleSizeMin": 2,
+    	"particleSizeRange": 5,
+    	"particleDuration": 2,
+    	"particleCount": 100,
+		"particleColor":[105,105,205,255]},		
+	"autocharge":true,  # whether the weapon will continue charging and fire if the LMB is tapped instead of held
+  #"fireSoundOne": "SRA_Spreadwings_on",
+  "fireSoundTwo": "plasma_cannon_fire"
+}
