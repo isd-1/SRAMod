@@ -24,6 +24,7 @@
 	# multiplier for how often hulls show up in the faction's fleets
 	"hullFrequency":{ # 势力的舰船出现概率调整
 		"tags":{
+			"SRA_bp":4,
 		},
 		"hulls":{
 		},
@@ -87,7 +88,7 @@
 		],
 	},
 	"priorityWeapons":{ # 优先选用的武器，会显著覆盖本势力其它武器的出现率，如无特殊要求则留空
-		"tags":[],
+		"tags":[SRA_bp],
 		"weapons":[
 		],
 	},
@@ -142,7 +143,7 @@
 		"combatFreighterProbability":0.1, # 用武装货舰替代正常货舰的概率
 		"combatFreighterCombatUseFraction":0, # 当舰队损失至低于此比率时，才将武装货舰当正规战舰上场
 		"combatFreighterCombatUseFractionWhenPriority":0, # 用武装货舰当正规战舰上场的概率(哪怕自己不缺的正规战舰)
-		"autofitRandomizeProbability":0.1, # 自动装配时的武器、插件打乱程度
+		"autofitRandomizeProbability":0, # 自动装配时的武器、插件打乱程度
 		
 		"commanderSkillsShuffleProbability":1,
 		"commanderSkills":[ # 本势力允许的指挥官舰队技能

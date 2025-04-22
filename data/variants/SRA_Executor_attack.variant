@@ -54,8 +54,8 @@
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
-                "WS0004": "SRA_ionpulser",
-                "WS0005": "SRA_ionpulser"
+                "WS0004": "SRA_riftbeam",
+                "WS0005": "SRA_riftbeam"
             }
         }
     ],

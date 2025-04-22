@@ -18,7 +18,7 @@
 	},
 
 	"combatCapital":{
-
+		"SRA_Executor_attack":1,
 	},
 	
 	# hybrid ships with good combat and cargo capacity
@@ -31,7 +31,7 @@
 	},
 
 	"combatFreighterLarge":{
-
+		"SRA_Executor_attack":1,
 	},
 	
 	"civilianRandom":{
@@ -48,7 +48,7 @@
 	},
 
 	"carrierLarge":{
-
+		"SRA_Executor_attack":1,
 	},
 
 	# phase ships

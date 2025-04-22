@@ -27,8 +27,8 @@
 	
 	
 	
-    "startShipsSolo":[["atlas_Standard"]],
-    "startShipsCombatSmall":[["atlas_Standard"]],
+    "startShipsSolo":[["SRA_Executor_attack"]],
+    "startShipsCombatSmall":[["SRA_Executor_attack"]],
     "startShipsTradeSmall":[["atlas_Standard"]],
 	"startShipsSuper":[["SRA_SOGZ_main_attack"]],
      
