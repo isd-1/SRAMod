@@ -1,0 +1,53 @@
+{
+    "displayName": "强袭",
+    "fluxCapacitors": 2,
+    "fluxVents": 20,
+    "hullId": "SRA_Cruiser",
+    "hullMods": [
+        "hardenedshieldemitter",
+        "stabilizedshieldemitter"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "SRA_Cruiser_attack",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0002": "SRA_riftbeam",
+                "WS0003": "SRA_riftbeam"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0004": "SRA_amsrm",
+                "WS0005": "SRA_amsrm"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0006": "SRA_amsrm",
+                "WS0007": "SRA_amsrm"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS0001": "SRA_riftcascade"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0008": "SRA_minipulser",
+                "WS0009": "SRA_minipulser"
+            }
+        }
+    ],
+    "wings": ["flash_wing"]
+}

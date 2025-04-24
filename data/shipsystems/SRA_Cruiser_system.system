@@ -1,0 +1,37 @@
+{
+    "id":"SRA_Cruiser_system",
+    "type":"ENGINE_MOD",
+	"aiType":"BURN_DRIVE",
+    "statsScript":"data.shipsystems.SRA_Cruiser_systemStats",
+
+    "jitterColor":[0,255,255,128],
+    "jitterCopies":4,
+    "jitterRange":10,
+    "jitterRangeRadiusFraction":0.2,
+
+    "engineGlowColor":[0,255,255,225],
+    "engineGlowContrailColor":[0,100,200,75],
+    "engineGlowLengthMult":4.0,
+    "engineGlowWidthMult":4.0,
+    "engineGlowGlowMult":4.0,
+
+    "shipAlpha":0.25,
+
+    "flameoutOnImpactChance":0,
+
+    "clampTurnRateAfter":true,
+    "clampMaxSpeedAfter":true,
+	"alwaysAccelerate":true,
+
+    "useSound":"system_plasma_burn",
+	"loopSound":"system_plasma_burn_loop",
+	"outOfUsesSound":"engine_disabled",
+	#"deactivateSound":"system_phase_cloak_deactivate",
+	"deactivateSound":"system_phase_cloak_deactivate",
+
+    "aiHints":{
+        "activeSpeedIncrease":400,
+        "burstMovementPotential":500,
+        "averageSpeedIncrease":200,
+    }
+}

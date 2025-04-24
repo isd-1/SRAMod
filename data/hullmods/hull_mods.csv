@@ -1,12 +1,4 @@
 name,id,tier,rarity,tech/manufacturer,tags,uiTags,base value,unlocked,hidden,hiddenEverywhere,cost_frigate,cost_dest,cost_cruiser,cost_capital,script,desc,short,sprite,
-星规-流转核心,SRA_core,4,0,星规技术,,,,,TRUE,,0,0,0,0,data.hullmods.SRA_core,"-创造与超越-
-提高 %s 强制排幅的速率。
-提高舰船护盾 %s 的展开速度。
-降低 %s 在战斗中修复受损武器及引擎的时间。
-完全 免疫EMP伤害。
-免疫日冕。
-允许舰船以 %s 的正常耗散速率在护盾开启时耗散硬幅能。
-每秒恢复 %s 的装甲与结构值。
-零幅能加速的阈值提高至幅能容量的 %s 。",-创造与超越-,graphics/hullmods/SRA_core.png,
+星规-流转核心,SRA_core,4,0,星规技术,,,,,TRUE,,0,0,0,0,data.hullmods.SRA_core,"-创造与超越-",-创造与超越-,graphics/hullmods/SRA_core.png,
 星规-众星领航,SRA_speed_aura,4,0,星规技术,,,,,TRUE,,0,0,0,0,data.hullmods.SRA_speed_aura,"这套引擎通过通过先进的时空原理改变整个舰队的时空状态，能提高 %s 的舰队最高航速。
 一般来说，这会导致舰队速度抵达常规航行的速度上限。",,graphics/hullmods/SRA_speed_aura.png,

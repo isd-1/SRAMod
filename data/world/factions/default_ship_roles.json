@@ -2,19 +2,18 @@
 	# should be a copy of "combatSmall", minus variants that are annoying to fight in low numbers
 	# for example, no Hyperions or fast beam-based kiting loadouts, or ships with damper field
 	"combatSmallForSmallFleet":{
-
 	},
 	
 	"combatSmall":{
-
+		"SRA_Cruiser_attack":1,
 	},
 
 	"combatMedium":{
-
+		"SRA_Cruiser_attack":1,
 	},
 
 	"combatLarge":{
-
+		"SRA_Cruiser_attack":1,
 	},
 
 	"combatCapital":{
@@ -27,7 +26,7 @@
 	},
 
 	"combatFreighterMedium":{
-
+		"SRA_Cruiser_attack":1,
 	},
 
 	"combatFreighterLarge":{
@@ -40,11 +39,11 @@
 
 	# carriers
 	"carrierSmall":{
-
+		"SRA_Cruiser_attack":1,
 	},
 
 	"carrierMedium":{
-
+		"SRA_Cruiser_attack":1,
 	},
 
 	"carrierLarge":{

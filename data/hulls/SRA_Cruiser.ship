@@ -1,0 +1,154 @@
+{
+  "hullName": "SRA_Cruiser",
+  "hullId": "SRA_Cruiser",
+  "hullSize": "DESTROYER",
+  "spriteName": "graphics/ships/SRA_Cruiser.png",
+  "style": "OMEGA",
+  "height": 256,
+  "width": 63,
+  "center": [32, 128],
+  "collisionRadius": 130,
+  "shieldCenter": [0, -0],
+  "shieldRadius": 128,
+  "viewOffset": 0,
+  "builtInMods": [
+    "SRA_core",
+    "advancedcore"
+  ],
+  "builtInWeapons": {
+    "WS0001": "SRA_riftcascade",
+  },
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "LARGE",
+      "type": "BUILT_IN",
+      "mount": "HIDDEN",
+      "arc": 270,
+      "angle": 0,
+      "locations": [-54, -0]
+    },
+    {
+      "id": "WS0002",
+      "size": "MEDIUM",
+      "type": "HYBRID",
+      "mount": "HIDDEN",
+      "arc": 270,
+      "angle": 0,
+      "locations": [-34, -0]
+    },
+    {
+      "id": "WS0003",
+      "size": "MEDIUM",
+      "type": "HYBRID",
+      "mount": "HIDDEN",
+      "arc": 270,
+      "angle": 0,
+      "locations": [-11, -0]
+    },
+    {
+      "id": "WS0004",
+      "size": "SMALL",
+      "type": "COMPOSITE",
+      "mount": "HIDDEN",
+      "arc": 270,
+      "angle": 30,
+      "locations": [-101, 16]
+    },
+    {
+      "id": "WS0005",
+      "size": "SMALL",
+      "type": "COMPOSITE",
+      "mount": "HIDDEN",
+      "arc": 270,
+      "angle": -30,
+      "locations": [-101, -16]
+    },
+    {
+      "id": "WS0006",
+      "size": "SMALL",
+      "type": "COMPOSITE",
+      "mount": "HIDDEN",
+      "arc": 150,
+      "angle": 30,
+      "locations": [-66, 10]
+    },
+    {
+      "id": "WS0007",
+      "size": "SMALL",
+      "type": "COMPOSITE",
+      "mount": "HIDDEN",
+      "arc": 150,
+      "angle": -30,
+      "locations": [-66, -10]
+    },
+    {
+      "id": "WS0008",
+      "size": "SMALL",
+      "type": "HYBRID",
+      "mount": "HIDDEN",
+      "arc": 90,
+      "angle": 30,
+      "locations": [50, 3]
+    },
+    {
+      "id": "WS0009",
+      "size": "SMALL",
+      "type": "HYBRID",
+      "mount": "HIDDEN",
+      "arc": 90,
+      "angle": -30,
+      "locations": [50, -3]
+    },
+    {
+      "id": "LB 1",
+      "size": "LARGE",
+      "type": "LAUNCH_BAY",
+      "mount": "HIDDEN",
+      "arc": 360,
+      "angle": 0,
+      "locations": [
+        -66, 10,
+        -66, -10
+      ]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-84, 11],
+      "length": 30,
+      "width": 10,
+      "angle": 180,
+      "contrailSize": 30,
+      "style": "OMEGA"
+    },
+    {
+      "location": [-84, -11],
+      "length": 30,
+      "width": 10,
+      "angle": -180,
+      "contrailSize": 30,
+      "style": "OMEGA"
+    }
+  ],
+  "bounds": [
+    -78, -9,
+    -101, -12,
+    -114, -26,
+    -73, -12,
+    -66, -15,
+    -54, -10,
+    -46, -12,
+    -29, -9,
+    116, 0,
+    116, -0,
+    -29, 9,
+    -46, 12,
+    -54, 10,
+    -66, 15,
+    -73, 12,
+    -114, 26,
+    -101, 12,
+    -78, 9
+  ]
+}
