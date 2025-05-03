@@ -13,7 +13,7 @@
   "viewOffset": 0,
   "builtInMods": [
     "SRA_core",
-    "advancedcore"
+    "targetingunit"
   ],
   "builtInWeapons": {
     "WS0001": "SRA_riftcascade",
@@ -24,7 +24,7 @@
       "size": "LARGE",
       "type": "BUILT_IN",
       "mount": "HIDDEN",
-      "arc": 270,
+      "arc": 0,
       "angle": 0,
       "locations": [-54, -0]
     },

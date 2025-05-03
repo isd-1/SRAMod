@@ -12,7 +12,7 @@
 		"SRA_immune":"完全免疫",
 		"SRASectionHeadingIncompatible":"不兼容插件",
 		"SRAParaIncompatible":"-不兼容 %s ;",
-		"SRAsafetyoverrides":"安全系统超驰"
+		"SRAsafetyoverrides":"安全协议超驰"
 	},
 	
 	"campaign": {
