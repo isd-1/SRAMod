@@ -1,0 +1,31 @@
+{
+	"quality":0.5,
+	"displayName":"区域支配战机",
+	"hullId":"SRA_PWMK",
+	"variantId":"SRA_PWMK_Fighter",
+	"fluxVents":0,
+	"fluxCapacitors":0,
+    "hullMods": [
+        "hardenedshieldemitter"
+    ],
+    "sMods": [
+        "autorepair",
+        "stabilizedshieldemitter",
+		"insulatedengine"
+    ],
+	# mode is either LINKED or ALTERNATING
+	# slot ids (WS ***) must match what's in the .ship file
+	"weaponGroups":[
+		{"mode":"LINKED",
+		 "weapons":{
+		 		"WS0001":"SRA_riftbeam",
+		 	},
+		},
+		{"mode":"LINKED",
+		 "weapons":{
+		 		"WS0002":"SRA_resonatormrm",
+		 		"WS0003":"SRA_dragon",
+		 	},
+		},
+	],
+}

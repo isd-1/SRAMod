@@ -38,5 +38,5 @@
             "weapons": {"WS0004": "SRA_devastator"}
         }
     ],
-    "wings": ["flash_wing"]
+    "wings": ["SRA_PWMK1_wing"]
 }

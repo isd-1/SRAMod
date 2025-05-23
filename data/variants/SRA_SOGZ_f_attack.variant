@@ -46,5 +46,5 @@
             "weapons": {"WS0006": "SRA_rifttorpedo"}
         }
     ],
-    "wings": ["flash_wing"]
+    "wings": ["SRA_PWMK1_wing"]
 }

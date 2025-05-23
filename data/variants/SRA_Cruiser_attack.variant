@@ -49,5 +49,5 @@
             }
         }
     ],
-    "wings": ["flash_wing"]
+    "wings": ["SRA_PWMK_wing"]
 }

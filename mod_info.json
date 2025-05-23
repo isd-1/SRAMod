@@ -25,7 +25,8 @@
 			"id": "nexerelin",
 			"name": "nexerelin",
 			#"version": "xxx"
-		}
+		},
+    	{"id": "BoxUtil", "name": "zz Box Util"}
 	],
 	"jars":["jars/SRAMod.jar"],
 	"modPlugin":"data.scripts.SRA_ModPlugin"

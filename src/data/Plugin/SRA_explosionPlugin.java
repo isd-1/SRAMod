@@ -120,7 +120,7 @@ public class SRA_explosionPlugin extends CombatEntityPluginWithParticles {
                 0.5f, // particleSizeMin
                 0.5f, // particleSizeRange
                 0.5f, // particleDuration
-                100, // particleCount
+                10, // particleCount
                 new Color(15, 15, 255, 0), // particleColor
                 new Color(15, 15, 255, 0)  // explosionColor
         );
@@ -144,7 +144,7 @@ public class SRA_explosionPlugin extends CombatEntityPluginWithParticles {
                 0.5f, // particleSizeMin
                 0.5f, // particleSizeRange
                 1f, // particleDuration
-                100, // particleCount
+                10, // particleCount
                 new Color(105,105,205, 225), // particleColor
                 new Color(105,105,205, 180)  // explosionColor
         );
@@ -168,7 +168,7 @@ public class SRA_explosionPlugin extends CombatEntityPluginWithParticles {
                 0.5f, // particleSizeMin
                 0.5f, // particleSizeRange
                 0.5f, // particleDuration
-                100, // particleCount
+                10, // particleCount
                 new Color(105,105,205, 225), // particleColor
                 new Color(105,105,205, 180)  // explosionColor
         );
