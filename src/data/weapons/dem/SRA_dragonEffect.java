@@ -18,9 +18,9 @@ import java.util.List;
  */
 public class SRA_dragonEffect implements OnFireEffectPlugin {
     Color DAMAGE_FIELD_COLOR = new Color(100, 100, 255, 150);
-    float DAMAGE_FIELD_RADIUS = 20f;
+    float DAMAGE_FIELD_RADIUS = 32f;
     float DAMAGE_PER_SECOND = 100f;
-    float PULSE_INTERVAL = 1f;
+    float PULSE_INTERVAL = 0.5f;
     float timeSinceLastPulse = 0f;
 	public void onFire(DamagingProjectileAPI projectile, WeaponAPI weapon, CombatEngineAPI engine) {
 		if (!(projectile instanceof MissileAPI)) return;
@@ -46,7 +46,7 @@ public class SRA_dragonEffect implements OnFireEffectPlugin {
     	}
     
 		public void advance(float amount, List<InputEventAPI> events) {
-		//if (engine.isPaused()) return;
+		if (engine.isPaused()) return;
         timeSinceLastPulse += amount;
         if (timeSinceLastPulse >= PULSE_INTERVAL) {
         	engine.spawnDamagingExplosion(SRA_dragon_missile_explosion(), projectile.getSource(),projectile.getLocation());
@@ -56,7 +56,7 @@ public class SRA_dragonEffect implements OnFireEffectPlugin {
 	}
     public DamagingExplosionSpec SRA_dragon_missile_explosion() {
         DamagingExplosionSpec Explosion=new DamagingExplosionSpec(
-                1f, // duration
+                0.5f, // duration
                 DAMAGE_FIELD_RADIUS, // radius
                 DAMAGE_FIELD_RADIUS, // coreRadius
                 DAMAGE_PER_SECOND, // maxDamage
